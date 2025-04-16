@@ -1,0 +1,331 @@
+:root {
+  --gradient-purple: #8d39ec;
+  --gradient-blue: #4039ec;
+  --smokewhite: rgb(245, 245, 245);
+}
+
+/* MAIN CONTAINER */
+.container-background {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  /* background-color: #1e1e1e; */
+  /* color: #1e1e1e; */
+
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: #f1f1f1;
+
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+}
+
+/* HEADER SECTION */
+.container-header {
+  height: 20vh;
+  width: 100vw;
+  /* background-color: blue; */
+
+  display: flex;
+  flex-direction: row;
+}
+.container-header-left {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.container-message {
+  width: auto;
+  height: 40%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.container-header-right {
+  width: 50%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.container-filter {
+  /* height: 50%; */
+  width: 90%;
+
+  /* background-color: blue; */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* HEADER LEFT BUTTONS */
+.button-sidebar {
+  width: 10vh;
+  height: 10vh;
+  margin-left: -8vw;
+
+  font-size: 400%;
+  color: white;
+  border: none;
+
+  background: linear-gradient(
+    -45deg,
+    var(--gradient-purple),
+    var(--gradient-blue)
+  );
+
+  box-shadow: 0 0 12px rgba(141, 57, 236, 0.4);
+  border-radius: 12.5px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button-sidebar:hover {
+  transform: translateY(-0.5vh);
+  box-shadow: 0 0 18px rgba(141, 57, 236, 0.6);
+}
+
+.button-profile {
+  width: 10vh;
+  height: 10vh;
+  border-radius: 50%;
+
+  background-color: white;
+  border: 4px solid #2e2e2e;
+
+  /* border-color: ; */
+}
+
+.text-home-header {
+  font-weight: 750;
+  font-size: 400%;
+  text-align: center;
+}
+.text-home-subheader {
+  font-weight: 500;
+  font-size: 200%;
+  margin-top: 1vh;
+}
+
+/* HEADER RIGHT TEXT */
+.text-header-tasks {
+  font-size: 200%;
+  font-weight: 600;
+}
+
+/* HEADER RIGHT BUTTONS */
+.button-filter {
+  width: 7.5vw;
+  height: 5vh;
+
+  margin-left: 3.5%;
+
+  font-size: 99%;
+  font-weight: 500;
+  color: white;
+
+  background: linear-gradient(
+    -17.5deg,
+    var(--gradient-purple),
+    var(--gradient-blue)
+  );
+
+  border: none;
+  border-radius: 12.5px;
+}
+.button-filter:hover {
+  transform: translateY(-0.25vh);
+}
+
+/* HEADER TEXT */
+
+/* =========================================== */
+
+/* PAGE BODY SECTION */
+.container-body {
+  height: 80vh;
+  width: 100vw;
+  /* background-color: green; */
+
+  /* MAKE 2 SECTIONS, LEFT AND RIGHT */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-body-left {
+  width: 50%;
+  height: 100%;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  /* background-color: greenyellow; */
+}
+.container-body-right {
+  width: 50%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* background-color: lightgray; */
+}
+/* BODY BUTTONS */
+.button-home-main {
+  width: 22.5vw;
+  height: 22.5vw;
+
+  border: none;
+  border-radius: 10%;
+
+  /* background-color: #2e2e2e; */
+  background: linear-gradient(
+    -45deg,
+    var(--gradient-purple),
+    var(--gradient-blue)
+  );
+
+  font-size: 200%;
+  color: white;
+
+  transition: transform 0.2s ease;
+}
+.button-home-main:hover {
+  transform: translateY(-0.75vh);
+}
+
+/* BUTTON LOGIC */
+.button-logic {
+  /* border: 4px solid #2e2e2e; */
+  /* color: #2e2e2e; */
+  background-color: #ffffff;
+  transition: transform 0.2s ease, filter 0.2s ease; /* Smooth transition for background and filter */
+}
+.button-logic:hover {
+  /* background-color: #e7e7e7; */
+  filter: brightness(0.9);
+}
+.button-logic:active {
+  /* background-color: #d0d0d0; */
+  filter: brightness(0.8);
+}
+
+/* XL screens (1268px and down) */
+@media (max-width: 1268px) {
+  .button-filter {
+    font-size: 0.8rem;
+  }
+  .button-home-main{
+    font-size: 2.5rem;
+  }
+  .button-sidebar{
+    margin-left: 7vw;
+  }
+}
+
+/* LG screens (1024px and down) */
+@media (max-width: 1024px) {
+  .button-filter {
+    font-size: 1rem;
+    width: 25vw;
+  }
+  .button-home-main{
+    font-size: 2.3rem;
+  }
+  .button-sidebar{
+    margin-left: 7vw;
+    margin-right: 3vw;
+  }
+}
+
+/* MD screens (868px and down) */
+@media (max-width: 868px) {
+  .button-filter {
+    font-size: 0.8rem;
+    width: 20vw;
+  }
+  .button-home-main{
+    font-size: 1.9rem;
+  }
+  .button-sidebar{
+    margin-left: 7vw;
+    margin-right: 3vw;
+  }
+}
+
+@media (max-width: 760px) {
+  .container-body-right, .container-header-right {
+    display: none;
+  }
+
+  .container-header-left {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .container-header {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  .text-home-header,
+  .text-home-subheader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .container-message {
+    width: 100%;
+    text-align: center;
+  }
+
+  .button-sidebar {
+    margin: 1rem 0; /* Adds spacing between buttons */
+  }
+
+  .button-profile {
+    margin-top: 1rem;
+  }
+}
+
+/* SM screens (600px and down) */
+@media (max-width: 600px) {
+  .button-filter {
+    font-size: 0.6rem;
+    width: 15vw;
+
+  }
+  .button-home-main{
+    font-size: 1.5rem;
+  }
+  .button-sidebar{
+    margin-left: 7vw;
+    margin-right: 3vw;
+  }
+  
+}
+
+

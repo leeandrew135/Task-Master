@@ -1,0 +1,73 @@
+\doxysection{frontend/src/components/\+Home/\+Kanban\+Column.jsx File Reference}
+\hypertarget{_kanban_column_8jsx}{}\label{_kanban_column_8jsx}\index{frontend/src/components/Home/KanbanColumn.jsx@{frontend/src/components/Home/KanbanColumn.jsx}}
+
+
+@component Kanban\+Column  
+
+
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_kanban_column_8jsx_ab2aa4fea907ccba1cd0f73a0c2452529}\label{_kanban_column_8jsx_ab2aa4fea907ccba1cd0f73a0c2452529} 
+import styles Kanban {\bfseries css}
+\item 
+\Hypertarget{_kanban_column_8jsx_a59be084da8908b7d77ff34b25cd84488}\label{_kanban_column_8jsx_a59be084da8908b7d77ff34b25cd84488} 
+{\bfseries import} \{ use\+Droppable \} from "{}@dnd-\/kit/core"{}
+\item 
+\Hypertarget{_kanban_column_8jsx_ae4ed16f3496cdca7f8876659df7d5983}\label{_kanban_column_8jsx_ae4ed16f3496cdca7f8876659df7d5983} 
+import Draggable\+Task from {\bfseries Draggable\+Task}
+\item 
+const \mbox{\hyperlink{_kanban_column_8jsx_a61abb3cc3fba59b808b838736ce75462}{Kanban\+Column}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+@component Kanban\+Column 
+
+A droppable column in the Kanban board that holds draggable tasks.
+
+Each column represents a task status (e.\+g., Backlog, Doing, Review, Done), and is configured as a droppable area using {\ttfamily @dnd-\/kit}. Tasks passed in via props are rendered inside the column as draggable cards.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \{string\}} & title -\/ The title of the column (used as droppable ID). \\
+\hline
+{\em \{\+Array\}} & tasks -\/ An array of task objects to render in this column.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\{JSX.\+Element\} A styled droppable Kanban column with task items.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+Draggable\+Task 
+\end{DoxySeeAlso}
+\begin{DoxyAuthor}{Author}
+Ali Robin 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{_kanban_column_8jsx_a61abb3cc3fba59b808b838736ce75462}\index{KanbanColumn.jsx@{KanbanColumn.jsx}!KanbanColumn@{KanbanColumn}}
+\index{KanbanColumn@{KanbanColumn}!KanbanColumn.jsx@{KanbanColumn.jsx}}
+\doxysubsubsection{\texorpdfstring{KanbanColumn}{KanbanColumn}}
+{\footnotesize\ttfamily \label{_kanban_column_8jsx_a61abb3cc3fba59b808b838736ce75462} 
+export default Kanban\+Column}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ (\{\ title,\ tasks\ \})\ =>\ \{}
+\DoxyCodeLine{\ \ \textcolor{keyword}{const}\ \{\ setNodeRef\ \}\ =\ useDroppable(\{}
+\DoxyCodeLine{\ \ \ \ id:\ title,}
+\DoxyCodeLine{\ \ \});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{return}\ (}
+\DoxyCodeLine{\ \ \ \ <div\ className=\textcolor{stringliteral}{"{}kanban-\/column"{}}\ ref=\{setNodeRef\}\ \textcolor{keywordtype}{id}=\{title\}>}
+\DoxyCodeLine{\ \ \ \ \ \ <h2>\{title\}</h2>}
+\DoxyCodeLine{\ \ \ \ \ \ \{tasks.map((task)\ =>\ (}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ <DraggableTask\ key=\{task.id\}\ task=\{task\}\ />}
+\DoxyCodeLine{\ \ \ \ \ \ ))\}}
+\DoxyCodeLine{\ \ \ \ </div>}
+\DoxyCodeLine{\ \ );}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}

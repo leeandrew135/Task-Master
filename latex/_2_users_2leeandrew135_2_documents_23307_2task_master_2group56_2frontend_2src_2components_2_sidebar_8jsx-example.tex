@@ -1,0 +1,62 @@
+\doxysection{/\+Users/leeandrew135/\+Documents/3307/task\+\_\+master/group56/frontend/src/components/\+Sidebar.\+jsx}
+\hypertarget{_2_users_2leeandrew135_2_documents_23307_2task_master_2group56_2frontend_2src_2components_2_sidebar_8jsx-example}{}\label{_2_users_2leeandrew135_2_documents_23307_2task_master_2group56_2frontend_2src_2components_2_sidebar_8jsx-example}\texorpdfstring{$<$}{<}Sidebar on\+Click=\{() =\texorpdfstring{$>$}{>} set\+Sidebar\+Open(false)\} /\texorpdfstring{$>$}{>}
+
+\texorpdfstring{$<$}{<}Sidebar on\+Click=\{() =\texorpdfstring{$>$}{>} set\+Sidebar\+Open(false)\} /\texorpdfstring{$>$}{>}\begin{DoxyAuthor}{Author}
+Andrew
+\end{DoxyAuthor}
+
+\begin{DoxyCodeInclude}{0}
+\DoxyCodeLine{\textcolor{keyword}{import}\ \textcolor{stringliteral}{"{}../styles/Sidebar.css"{}};}
+\DoxyCodeLine{\textcolor{keyword}{import}\ \{\ useState\ \}\ from\ \textcolor{stringliteral}{"{}react"{}};}
+\DoxyCodeLine{\textcolor{keyword}{import}\ \{\ useNavigate\ \}\ from\ \textcolor{stringliteral}{"{}react-\/router-\/dom"{}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{const}\ Sidebar\ =\ (\{\ onClick\ \})\ =>\ \{}
+\DoxyCodeLine{\ \ \textcolor{keyword}{const}\ navigate\ =\ useNavigate();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{keyword}{const}\ changeRoute\ =\ (route)\ =>\ \{}
+\DoxyCodeLine{\ \ \ \ navigate(route);}
+\DoxyCodeLine{\ \ \};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{keyword}{const}\ backgroundClicked\ =\ ()\ =>\ \{}
+\DoxyCodeLine{\ \ \ \ onClick();}
+\DoxyCodeLine{\ \ \};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{return}\ (}
+\DoxyCodeLine{\ \ \ \ <div>}
+\DoxyCodeLine{\ \ \ \ \ \ <div\ className=\textcolor{stringliteral}{"{}sidebar-\/background"{}}\ onClick=\{backgroundClicked\}>}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ <div\ className=\textcolor{stringliteral}{"{}container-\/sidebar"{}}\ onClick=\{(e)\ =>\ e.stopPropagation()\}>}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ <button}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ className=\textcolor{stringliteral}{"{}sidebar-\/button-\/nav"{}}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ onClick=\{()\ =>\ changeRoute(\textcolor{stringliteral}{"{}/home"{}})\}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ >}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ Home}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ </button>}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ <button}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ className=\textcolor{stringliteral}{"{}sidebar-\/button-\/nav"{}}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ onClick=\{()\ =>\ changeRoute(\textcolor{stringliteral}{"{}/calendar"{}})\}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ >}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ Calendar}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ </button>}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ <button}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ className=\textcolor{stringliteral}{"{}sidebar-\/button-\/nav"{}}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ onClick=\{()\ =>\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ localStorage.removeItem(\textcolor{stringliteral}{"{}userData"{}});}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ navigate(\textcolor{stringliteral}{"{}/"{}});}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \}\}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ >}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ Sign\ Out}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ </button>}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \{\textcolor{comment}{/*\ <button\ className="{}sidebar-\/button-\/nav"{}\ onClick=\{()\ =>\ changeRoute("{}/project"{})\}>Projects</button>\ */}\}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ </div>}
+\DoxyCodeLine{\ \ \ \ \ \ </div>}
+\DoxyCodeLine{\ \ \ \ </div>}
+\DoxyCodeLine{\ \ );}
+\DoxyCodeLine{\};}
+\DoxyCodeLine{}
+\DoxyCodeLine{export\ \textcolor{keywordflow}{default}\ Sidebar;}
+
+\end{DoxyCodeInclude}
+ 

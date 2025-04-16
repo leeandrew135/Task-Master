@@ -1,0 +1,69 @@
+:root {
+  --gradient-purple: #8d39ec;
+  --gradient-blue: #4039ec;
+}
+
+/* BLURRED BACKGROUND */
+.sidebar-background {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background-color: rgba(0, 0, 0, 0.5);
+
+  
+
+  backdrop-filter: blur(3px);
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  z-index: 10;
+}
+
+/* SIDEBAR CONTAINER */
+.container-sidebar {
+  width: 35vw;
+  height: 100vh;
+
+  position: fixed;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: #f1f1f1;
+}
+
+/* SIDEBAR BUTTONS */
+.sidebar-button-nav {
+  width: 80%;
+  height: 7.5%;
+  margin-bottom: 3.5%;
+
+  background: linear-gradient(
+    -12.5deg,
+    var(--gradient-purple),
+    var(--gradient-blue)
+  );
+
+  border: none;
+  border-radius: 15px;
+
+  color: white;
+  font-size: 200%;
+  font-weight: 400;
+
+  transition: transform 0.2s ease;
+}
+.sidebar-button-nav:hover {
+  filter: brightness(0.9);
+  transform: translateY(-0.35vh);
+}
+.sidebar-button-nav:active {
+  filter: brightness(0.8);
+}

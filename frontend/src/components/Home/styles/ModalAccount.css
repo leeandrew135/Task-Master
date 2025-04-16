@@ -1,0 +1,31 @@
+:root {
+  --gradient-purple: #8d39ec;
+  --gradient-blue: #4039ec;
+}
+
+.modal-background {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+/* MAIN MODAL CONTAINER */
+.container-home-modal {
+  width: 70vw;
+  height: 70vh;
+
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: white;
+  border: 4px solid #1e1e1e;
+}

@@ -1,0 +1,43 @@
+\doxysection{backend/\+Project.cpp File Reference}
+\hypertarget{_project_8cpp}{}\label{_project_8cpp}\index{backend/Project.cpp@{backend/Project.cpp}}
+
+
+Implementation of the \doxylink{class_project}{Project} class.  
+
+
+{\ttfamily \#include "{}Project.\+h"{}}\newline
+{\ttfamily \#include "{}User.\+h"{}}\newline
+{\ttfamily \#include $<$ctime$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{_project_8cpp_a0ed602ce2acf21623ad19a6f5b79c142}{get\+Current\+Date}} ()
+\begin{DoxyCompactList}\small\item\em Helper function to get the current system date. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of the \doxylink{class_project}{Project} class. 
+
+This file is for the \doxylink{class_project}{Project} class It adds tasks and users, modifying deadlines, and tracking project completion status. It also includes a helper function to retrieve the current date. Though we didn\textquotesingle{}t use the current date and the completions status and the deadline. We just couldn\textquotesingle{}t think of a reason why we need those when we have the \doxylink{class_task}{Task} doing all that
+
+\begin{DoxyAuthor}{Author}
+Luca Robin 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_project_8cpp_a0ed602ce2acf21623ad19a6f5b79c142}\index{Project.cpp@{Project.cpp}!getCurrentDate@{getCurrentDate}}
+\index{getCurrentDate@{getCurrentDate}!Project.cpp@{Project.cpp}}
+\doxysubsubsection{\texorpdfstring{getCurrentDate()}{getCurrentDate()}}
+{\footnotesize\ttfamily \label{_project_8cpp_a0ed602ce2acf21623ad19a6f5b79c142} 
+std\+::string get\+Current\+Date (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Helper function to get the current system date. 
+
+Gets the current date in the format YYYY-\/\+MM-\/\+DD.
+
+\begin{DoxyReturn}{Returns}
+std\+::string Current date as a string. 
+\end{DoxyReturn}

@@ -1,0 +1,263 @@
+\doxysection{Comment Class Reference}
+\hypertarget{class_comment}{}\label{class_comment}\index{Comment@{Comment}}
+
+
+did not get used so fine to skip.  
+
+
+
+
+{\ttfamily \#include $<$Comment.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_comment_a6493d3b8a1bf7b13e5e163d8f7dff266}{Comment}} (int \mbox{\hyperlink{class_comment_a78bbb323662e6cafd9cd8b91d68d41de}{comment\+ID}}, const std\+::string \&\mbox{\hyperlink{class_comment_a91b525551b15917ac6f00e087faf7b56}{comment\+Body}}, const std\+::string \&\mbox{\hyperlink{class_comment_a718e2333b3612cf15186b3a820caa745}{comment\+Date}}, const std\+::string \&\mbox{\hyperlink{class_comment_ada1f67c5e6b5d87010a957010e7c821b}{comment\+Status}}, int \mbox{\hyperlink{class_comment_a7bf232a3181150a1d1edc1420c546565}{comment\+User}})
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_comment}{Comment} object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_comment_aa0bcfcda44a70b3937ec19ff86851c08}{get\+Comment\+ID}} () const
+\begin{DoxyCompactList}\small\item\em Get the ID of the comment. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_comment_aa278e69cfe6408f4d96f11ece17520cb}{get\+Comment\+Body}} () const
+\begin{DoxyCompactList}\small\item\em Get the content/body of the comment. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_comment_af96db26fc7fd2a525c31fe290cd4c863}{get\+Comment\+Date}} () const
+\begin{DoxyCompactList}\small\item\em Get the date of the comment. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_comment_a8b832e6dc03b9e05fcb8b75ece729b5f}{get\+Comment\+Status}} () const
+\begin{DoxyCompactList}\small\item\em Get the current status of the comment. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_comment_aef9c86702602ee67925f9060ded4e66b}{get\+Comment\+User}} () const
+\begin{DoxyCompactList}\small\item\em Get the user ID of the comment\textquotesingle{}s author. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_comment_a8ba6776c22a3b205666e5112eaef1b2a}{edit\+Comment\+Body}} (const std\+::string \&new\+Body)
+\begin{DoxyCompactList}\small\item\em Edit the comment body. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_comment_ae8bcf813707d0bf7804767b034f23101}{edit\+Comment\+Date}} (const std\+::string \&new\+Date)
+\begin{DoxyCompactList}\small\item\em Edit the comment date. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_comment_a4aa166c4ee0ae156f62c400cdb5054ef}{edit\+Comment\+Status}} (const std\+::string \&new\+Status)
+\begin{DoxyCompactList}\small\item\em Edit the comment status. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_comment_a93125c19f29eac4be134e0c0b1d6283b}{delete\+Comment}} ()
+\begin{DoxyCompactList}\small\item\em Perform a soft delete on the comment. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_comment_a78bbb323662e6cafd9cd8b91d68d41de}\label{class_comment_a78bbb323662e6cafd9cd8b91d68d41de} 
+int {\bfseries comment\+ID}
+\begin{DoxyCompactList}\small\item\em Unique identifier for the comment. \end{DoxyCompactList}\item 
+\Hypertarget{class_comment_a91b525551b15917ac6f00e087faf7b56}\label{class_comment_a91b525551b15917ac6f00e087faf7b56} 
+std\+::string {\bfseries comment\+Body}
+\begin{DoxyCompactList}\small\item\em Text content of the comment. \end{DoxyCompactList}\item 
+\Hypertarget{class_comment_a718e2333b3612cf15186b3a820caa745}\label{class_comment_a718e2333b3612cf15186b3a820caa745} 
+std\+::string {\bfseries comment\+Date}
+\begin{DoxyCompactList}\small\item\em Date the comment was created. \end{DoxyCompactList}\item 
+\Hypertarget{class_comment_ada1f67c5e6b5d87010a957010e7c821b}\label{class_comment_ada1f67c5e6b5d87010a957010e7c821b} 
+std\+::string {\bfseries comment\+Status}
+\begin{DoxyCompactList}\small\item\em Status of the comment (e.\+g., "{}active"{}, "{}deleted"{}) \end{DoxyCompactList}\item 
+\Hypertarget{class_comment_a7bf232a3181150a1d1edc1420c546565}\label{class_comment_a7bf232a3181150a1d1edc1420c546565} 
+int {\bfseries comment\+User}
+\begin{DoxyCompactList}\small\item\em ID of the user who posted the comment. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+did not get used so fine to skip. 
+
+I did add commnents just in case, but it is not used at all 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_comment_a6493d3b8a1bf7b13e5e163d8f7dff266}\index{Comment@{Comment}!Comment@{Comment}}
+\index{Comment@{Comment}!Comment@{Comment}}
+\doxysubsubsection{\texorpdfstring{Comment()}{Comment()}}
+{\footnotesize\ttfamily \label{class_comment_a6493d3b8a1bf7b13e5e163d8f7dff266} 
+Comment\+::\+Comment (\begin{DoxyParamCaption}\item[{int}]{comment\+ID}{, }\item[{const std\+::string \&}]{comment\+Body}{, }\item[{const std\+::string \&}]{comment\+Date}{, }\item[{const std\+::string \&}]{comment\+Status}{, }\item[{int}]{comment\+User}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_comment}{Comment} object. 
+
+Initializes the comment with an ID, body, date, status, and user ID.
+
+
+\begin{DoxyParams}{Parameters}
+{\em comment\+ID} & ID of the comment. \\
+\hline
+{\em comment\+Body} & Text content of the comment. \\
+\hline
+{\em comment\+Date} & Date the comment was posted. \\
+\hline
+{\em comment\+Status} & Status of the comment. \\
+\hline
+{\em comment\+User} & ID of the user who made the comment.\\
+\hline
+\end{DoxyParams}
+Initializes a \doxylink{class_comment}{Comment} with an ID, body, date, status, and the user who made it.
+
+
+\begin{DoxyParams}{Parameters}
+{\em comment\+ID} & ID of the comment. \\
+\hline
+{\em comment\+Body} & Text content of the comment. \\
+\hline
+{\em comment\+Date} & Date the comment was posted. \\
+\hline
+{\em comment\+Status} & Current status of the comment (e.\+g., active, deleted). \\
+\hline
+{\em comment\+User} & ID of the user who posted the comment. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_comment_a93125c19f29eac4be134e0c0b1d6283b}\index{Comment@{Comment}!deleteComment@{deleteComment}}
+\index{deleteComment@{deleteComment}!Comment@{Comment}}
+\doxysubsubsection{\texorpdfstring{deleteComment()}{deleteComment()}}
+{\footnotesize\ttfamily \label{class_comment_a93125c19f29eac4be134e0c0b1d6283b} 
+void Comment\+::delete\+Comment (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Perform a soft delete on the comment. 
+
+Marks the comment as deleted.
+
+Marks the comment as deleted by changing its status and replacing the body text with a placeholder message.
+
+Performs a "{}soft delete"{} by setting the comment status to "{}deleted"{} and replacing the body content with a placeholder. \Hypertarget{class_comment_a8ba6776c22a3b205666e5112eaef1b2a}\index{Comment@{Comment}!editCommentBody@{editCommentBody}}
+\index{editCommentBody@{editCommentBody}!Comment@{Comment}}
+\doxysubsubsection{\texorpdfstring{editCommentBody()}{editCommentBody()}}
+{\footnotesize\ttfamily \label{class_comment_a8ba6776c22a3b205666e5112eaef1b2a} 
+void Comment\+::edit\+Comment\+Body (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{new\+Body}{}\end{DoxyParamCaption})}
+
+
+
+Edit the comment body. 
+
+Edit the content of the comment.
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Body} & The new text to replace the current body.\\
+\hline
+{\em new\+Body} & The new body text for the comment. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_comment_ae8bcf813707d0bf7804767b034f23101}\index{Comment@{Comment}!editCommentDate@{editCommentDate}}
+\index{editCommentDate@{editCommentDate}!Comment@{Comment}}
+\doxysubsubsection{\texorpdfstring{editCommentDate()}{editCommentDate()}}
+{\footnotesize\ttfamily \label{class_comment_ae8bcf813707d0bf7804767b034f23101} 
+void Comment\+::edit\+Comment\+Date (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{new\+Date}{}\end{DoxyParamCaption})}
+
+
+
+Edit the comment date. 
+
+Edit the date of the comment.
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Date} & The new date string.\\
+\hline
+{\em new\+Date} & The new date for the comment. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_comment_a4aa166c4ee0ae156f62c400cdb5054ef}\index{Comment@{Comment}!editCommentStatus@{editCommentStatus}}
+\index{editCommentStatus@{editCommentStatus}!Comment@{Comment}}
+\doxysubsubsection{\texorpdfstring{editCommentStatus()}{editCommentStatus()}}
+{\footnotesize\ttfamily \label{class_comment_a4aa166c4ee0ae156f62c400cdb5054ef} 
+void Comment\+::edit\+Comment\+Status (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{new\+Status}{}\end{DoxyParamCaption})}
+
+
+
+Edit the comment status. 
+
+Edit the status of the comment.
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Status} & The new status string (e.\+g., "{}active"{}, "{}deleted"{}).\\
+\hline
+{\em new\+Status} & The new status (e.\+g., "{}active"{}, "{}deleted"{}). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_comment_aa278e69cfe6408f4d96f11ece17520cb}\index{Comment@{Comment}!getCommentBody@{getCommentBody}}
+\index{getCommentBody@{getCommentBody}!Comment@{Comment}}
+\doxysubsubsection{\texorpdfstring{getCommentBody()}{getCommentBody()}}
+{\footnotesize\ttfamily \label{class_comment_aa278e69cfe6408f4d96f11ece17520cb} 
+std\+::string Comment\+::get\+Comment\+Body (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the content/body of the comment. 
+
+Get the body text of the comment.
+
+\begin{DoxyReturn}{Returns}
+The comment body as a string.
+
+std\+::string The content of the comment. 
+\end{DoxyReturn}
+\Hypertarget{class_comment_af96db26fc7fd2a525c31fe290cd4c863}\index{Comment@{Comment}!getCommentDate@{getCommentDate}}
+\index{getCommentDate@{getCommentDate}!Comment@{Comment}}
+\doxysubsubsection{\texorpdfstring{getCommentDate()}{getCommentDate()}}
+{\footnotesize\ttfamily \label{class_comment_af96db26fc7fd2a525c31fe290cd4c863} 
+std\+::string Comment\+::get\+Comment\+Date (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the date of the comment. 
+
+Get the date the comment was posted.
+
+\begin{DoxyReturn}{Returns}
+The comment date as a string.
+
+std\+::string The date of the comment. 
+\end{DoxyReturn}
+\Hypertarget{class_comment_aa0bcfcda44a70b3937ec19ff86851c08}\index{Comment@{Comment}!getCommentID@{getCommentID}}
+\index{getCommentID@{getCommentID}!Comment@{Comment}}
+\doxysubsubsection{\texorpdfstring{getCommentID()}{getCommentID()}}
+{\footnotesize\ttfamily \label{class_comment_aa0bcfcda44a70b3937ec19ff86851c08} 
+int Comment\+::get\+Comment\+ID (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the ID of the comment. 
+
+\begin{DoxyReturn}{Returns}
+The comment ID.
+
+int The comment ID. 
+\end{DoxyReturn}
+\Hypertarget{class_comment_a8b832e6dc03b9e05fcb8b75ece729b5f}\index{Comment@{Comment}!getCommentStatus@{getCommentStatus}}
+\index{getCommentStatus@{getCommentStatus}!Comment@{Comment}}
+\doxysubsubsection{\texorpdfstring{getCommentStatus()}{getCommentStatus()}}
+{\footnotesize\ttfamily \label{class_comment_a8b832e6dc03b9e05fcb8b75ece729b5f} 
+std\+::string Comment\+::get\+Comment\+Status (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the current status of the comment. 
+
+Get the status of the comment.
+
+\begin{DoxyReturn}{Returns}
+The comment status as a string.
+
+std\+::string The status (e.\+g., "{}active"{}, "{}deleted"{}). 
+\end{DoxyReturn}
+\Hypertarget{class_comment_aef9c86702602ee67925f9060ded4e66b}\index{Comment@{Comment}!getCommentUser@{getCommentUser}}
+\index{getCommentUser@{getCommentUser}!Comment@{Comment}}
+\doxysubsubsection{\texorpdfstring{getCommentUser()}{getCommentUser()}}
+{\footnotesize\ttfamily \label{class_comment_aef9c86702602ee67925f9060ded4e66b} 
+int Comment\+::get\+Comment\+User (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the user ID of the comment\textquotesingle{}s author. 
+
+Get the user ID associated with the comment.
+
+\begin{DoxyReturn}{Returns}
+The user ID.
+
+int The user ID. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+backend/\mbox{\hyperlink{_comment_8h}{Comment.\+h}}\item 
+backend/\mbox{\hyperlink{_comment_8cpp}{Comment.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,38 @@
+:root {
+  --gradient-purple: #8d39ec;
+  --gradient-blue: #4039ec;
+  --smokewhite: rgb(245, 245, 245);
+}
+
+.container-button-project-select {
+  background: linear-gradient(
+    -12.5deg,
+    var(--gradient-purple),
+    var(--gradient-blue)
+  );
+
+  border-radius: 15px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+  font-size: 140%;
+  font-weight: 550;
+
+  transition: transform 0.2s ease;
+}
+
+.container-button-project-select:hover {
+  filter: brightness(0.9);
+  transform: translateY(-0.5vh);
+}
+.container-button-project-select:active {
+  filter: brightness(0.8);
+}
+ 

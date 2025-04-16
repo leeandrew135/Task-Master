@@ -1,0 +1,57 @@
+\doxysection{frontend/src/components/\+Home/\+Button\+Project\+Select.jsx File Reference}
+\hypertarget{_button_project_select_8jsx}{}\label{_button_project_select_8jsx}\index{frontend/src/components/Home/ButtonProjectSelect.jsx@{frontend/src/components/Home/ButtonProjectSelect.jsx}}
+
+
+@component Button\+Project\+Select  
+
+
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_button_project_select_8jsx_aaed10feaf2dda4314d93c83408affea1}\label{_button_project_select_8jsx_aaed10feaf2dda4314d93c83408affea1} 
+import React from {\bfseries react}
+\item 
+\Hypertarget{_button_project_select_8jsx_a90a569d885feeab49087b7e510499582}\label{_button_project_select_8jsx_a90a569d885feeab49087b7e510499582} 
+import styles Button\+Project\+Select {\bfseries css}
+\item 
+const \mbox{\hyperlink{_button_project_select_8jsx_a80505d494370092af7f068fd794ad33c}{Button\+Project\+Select}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+@component Button\+Project\+Select 
+
+A clickable UI element used to select a project by name.
+
+This component displays the project name and triggers an action when clicked. It is typically used in a list of projects, such as inside a project selection modal.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \{string\}} & project\+Name -\/ The name/title of the project to display. \\
+\hline
+{\em \{\+Function\}} & on\+Click -\/ Callback triggered when the project button is clicked.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\{JSX.\+Element\} A styled, clickable project selection box. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{_button_project_select_8jsx_a80505d494370092af7f068fd794ad33c}\index{ButtonProjectSelect.jsx@{ButtonProjectSelect.jsx}!ButtonProjectSelect@{ButtonProjectSelect}}
+\index{ButtonProjectSelect@{ButtonProjectSelect}!ButtonProjectSelect.jsx@{ButtonProjectSelect.jsx}}
+\doxysubsubsection{\texorpdfstring{ButtonProjectSelect}{ButtonProjectSelect}}
+{\footnotesize\ttfamily \label{_button_project_select_8jsx_a80505d494370092af7f068fd794ad33c} 
+export default Button\+Project\+Select}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ (\{\ projectName,\ onClick\ \})\ =>\ \{}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{return}\ (}
+\DoxyCodeLine{\ \ \ \ <div\ className=\textcolor{stringliteral}{"{}container-\/button-\/project-\/select"{}}\ onClick=\{onClick\}>}
+\DoxyCodeLine{\ \ \ \ \ \ <span\ className=\textcolor{stringliteral}{"{}component-\/project-\/select-\/title"{}}>\{projectName\}</span>}
+\DoxyCodeLine{\ \ \ \ </div>}
+\DoxyCodeLine{\ \ );}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}

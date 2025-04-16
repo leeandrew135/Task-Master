@@ -1,0 +1,59 @@
+\doxysection{backend/server.cpp File Reference}
+\hypertarget{server_8cpp}{}\label{server_8cpp}\index{backend/server.cpp@{backend/server.cpp}}
+
+
+Crow + SQLite3-\/based \doxylink{class_task}{Task} Manager Backend.  
+
+
+{\ttfamily \#include "{}crow.\+h"{}}\newline
+{\ttfamily \#include $<$sqlite3.\+h$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include "{}crow/middlewares/cors.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{server_8cpp_af0dbd38cac8526caa64e0cf6d87e4a7b}{execute\+SQL}} (const char \texorpdfstring{$\ast$}{*}sql)
+\begin{DoxyCompactList}\small\item\em Executes a raw SQL command on the SQLite3 database. \end{DoxyCompactList}\item 
+\Hypertarget{server_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{server_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+int {\bfseries main} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{server_8cpp_ad6e663497d2c934364b3bcf07496b30b}\label{server_8cpp_ad6e663497d2c934364b3bcf07496b30b} 
+sqlite3 \texorpdfstring{$\ast$}{*} {\bfseries db}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Crow + SQLite3-\/based \doxylink{class_task}{Task} Manager Backend. 
+
+This file implements a RESTful backend server using the Crow web framework and SQLite3 to manage the app
+
+\begin{DoxyAuthor}{Author}
+Ethan, Robin, Luca 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{server_8cpp_af0dbd38cac8526caa64e0cf6d87e4a7b}\index{server.cpp@{server.cpp}!executeSQL@{executeSQL}}
+\index{executeSQL@{executeSQL}!server.cpp@{server.cpp}}
+\doxysubsubsection{\texorpdfstring{executeSQL()}{executeSQL()}}
+{\footnotesize\ttfamily \label{server_8cpp_af0dbd38cac8526caa64e0cf6d87e4a7b} 
+int execute\+SQL (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{sql}{}\end{DoxyParamCaption})}
+
+
+
+Executes a raw SQL command on the SQLite3 database. 
+
+If an error occurs, it logs the error to stderr.
+
+
+\begin{DoxyParams}{Parameters}
+{\em sql} & The raw SQL query to execute. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Returns SQLITE\+\_\+\+OK (0) if successful, or another SQLite error code. 
+\end{DoxyReturn}

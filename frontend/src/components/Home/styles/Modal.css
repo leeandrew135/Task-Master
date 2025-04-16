@@ -1,0 +1,100 @@
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    color: #f1f1f1;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 400px;
+    position: relative; 
+    /* center everything inside */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  
+  .modal-content h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .modal-content input[type="text"],
+  .modal-content input[type="password"],
+  .modal-content input[type="email"],
+  .modal-content textarea {
+    width: 80%;
+    margin-top: 1rem;
+    margin-bottom: 0.75rem;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    color: #1f2937;
+  }
+
+  .button-container{
+    padding: 2vh;
+  }
+  
+  .modal-content button {
+    margin-right: 0.75rem;
+    padding: 0.6rem 1.25rem;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: 0.2s ease;
+  }
+  
+  .save-button {
+    background: white;
+    color: #6D28D9;
+  }
+  
+  .save-button:hover {
+    background: #ede9fe;
+  }
+  
+  .cancel-button {
+    background: #9333ea;
+    color: white;
+  }
+  
+  .cancel-button:hover {
+    background: #7e22ce;
+  }
+
+  select, .modal-content input[type="date"] {
+    margin-left: 5px;
+    margin-bottom: 0.75rem;
+  }
+
+  .modal-actions {
+    margin-top: 0.25rem;
+  }
+
+  textarea {
+    resize: none; /* Prevents resizing */
+    overflow-y: auto; /* Enables vertical scrolling */
+    height: 150px; /* Adjust as needed */
+    width: 300px; /* Adjust as needed */
+  }
+  

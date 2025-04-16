@@ -1,0 +1,76 @@
+\doxysection{frontend/src/components/\+Home/\+Task\+Home.jsx File Reference}
+\hypertarget{_task_home_8jsx}{}\label{_task_home_8jsx}\index{frontend/src/components/Home/TaskHome.jsx@{frontend/src/components/Home/TaskHome.jsx}}
+
+
+@component Task\+Home  
+
+
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_task_home_8jsx_aaed10feaf2dda4314d93c83408affea1}\label{_task_home_8jsx_aaed10feaf2dda4314d93c83408affea1} 
+import React from {\bfseries react}
+\item 
+\Hypertarget{_task_home_8jsx_a59be084da8908b7d77ff34b25cd84488}\label{_task_home_8jsx_a59be084da8908b7d77ff34b25cd84488} 
+{\bfseries import} \{ Link \} from "{}react-\/router-\/dom"{}
+\item 
+\Hypertarget{_task_home_8jsx_ab3c04ae249366b874b1de1370919a80f}\label{_task_home_8jsx_ab3c04ae249366b874b1de1370919a80f} 
+import styles Styles\+Task\+Home {\bfseries css}
+\item 
+const \mbox{\hyperlink{_task_home_8jsx_a5c2cdd1b244858dada0d780be62402af}{Task\+Home}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+@component Task\+Home 
+
+A visual component that displays a task\textquotesingle{}s name and description with an action button.
+
+This component is used in the home view or dashboard to preview a task’s title and description. The {\ttfamily • • •} button can be hooked to show more details, options, or actions (e.\+g., edit, delete).
+
+
+\begin{DoxyParams}{Parameters}
+{\em \{string\}} & task\+Name -\/ The title of the task. \\
+\hline
+{\em \{string\}} & task\+Desc -\/ A short description of the task.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\{JSX.\+Element\} A stylized box displaying the task with a detail button.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Andrew 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{_task_home_8jsx_a5c2cdd1b244858dada0d780be62402af}\index{TaskHome.jsx@{TaskHome.jsx}!TaskHome@{TaskHome}}
+\index{TaskHome@{TaskHome}!TaskHome.jsx@{TaskHome.jsx}}
+\doxysubsubsection{\texorpdfstring{TaskHome}{TaskHome}}
+{\footnotesize\ttfamily \label{_task_home_8jsx_a5c2cdd1b244858dada0d780be62402af} 
+export default Task\+Home}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ (\{\ taskName,\ taskDesc,\ dueDate,\ projectName\ \})\ =>\ \{}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{return}\ (}
+\DoxyCodeLine{\ \ \ \ <div\ className=\textcolor{stringliteral}{"{}container-\/component-\/task"{}}>}
+\DoxyCodeLine{\ \ \ \ \ \ \{\}}
+\DoxyCodeLine{\ \ \ \ \ \ <div\ className=\textcolor{stringliteral}{"{}component-\/task-\/text"{}}>}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ <div>}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ <text\ className=\textcolor{stringliteral}{"{}component-\/task-\/date"{}}>Due\ by\ \{dueDate\}</text>}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ </div>}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ <div>}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ <text\ className=\textcolor{stringliteral}{"{}component-\/task-\/title"{}}>}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \{taskName\}\ |\ Project:\ \{projectName\}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ </text>}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ </div>}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ <div>}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ <text\ className=\textcolor{stringliteral}{"{}component-\/task-\/desc"{}}>\{taskDesc\}</text>}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ </div>}
+\DoxyCodeLine{\ \ \ \ \ \ </div>}
+\DoxyCodeLine{\ \ \ \ </div>}
+\DoxyCodeLine{\ \ );}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}

@@ -1,0 +1,58 @@
+\doxysection{frontend/src/pages/\+Page\+Project.jsx File Reference}
+\hypertarget{_page_project_8jsx}{}\label{_page_project_8jsx}\index{frontend/src/pages/PageProject.jsx@{frontend/src/pages/PageProject.jsx}}
+
+
+@component Page\+Project  
+
+
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_page_project_8jsx_aaed10feaf2dda4314d93c83408affea1}\label{_page_project_8jsx_aaed10feaf2dda4314d93c83408affea1} 
+import React from {\bfseries react}
+\item 
+\Hypertarget{_page_project_8jsx_a244069b9a4eebe1fed9f8bf234c15fe9}\label{_page_project_8jsx_a244069b9a4eebe1fed9f8bf234c15fe9} 
+import Kanban from {\bfseries Kanban}
+\item 
+\Hypertarget{_page_project_8jsx_a59be084da8908b7d77ff34b25cd84488}\label{_page_project_8jsx_a59be084da8908b7d77ff34b25cd84488} 
+{\bfseries import} \{ use\+Params \} from "{}react-\/router-\/dom"{}
+\item 
+const \mbox{\hyperlink{_page_project_8jsx_abd0b0239a52632d83da424514b82c9f3}{Page\+Project}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+@component Page\+Project 
+
+Renders the Kanban board for a specific project.
+
+This component retrieves the project ID from the route parameters and passes control to the Kanban component for rendering project-\/specific content.
+
+Example route\+: /projects/\+:project\+Id
+
+\begin{DoxyReturn}{Returns}
+\{JSX.\+Element\} The Kanban board for the specified project.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Andrew, Robin 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{_page_project_8jsx_abd0b0239a52632d83da424514b82c9f3}\index{PageProject.jsx@{PageProject.jsx}!PageProject@{PageProject}}
+\index{PageProject@{PageProject}!PageProject.jsx@{PageProject.jsx}}
+\doxysubsubsection{\texorpdfstring{PageProject}{PageProject}}
+{\footnotesize\ttfamily \label{_page_project_8jsx_abd0b0239a52632d83da424514b82c9f3} 
+export default Page\+Project}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ ()\ =>\ \{}
+\DoxyCodeLine{\ \ \textcolor{keyword}{const}\ \{\ projectId\ \}\ =\ useParams();}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ console.log(\textcolor{stringliteral}{"{}PageProject\ got\ projectId:"{}},\ projectId);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{return}\ <Kanban\ />;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}

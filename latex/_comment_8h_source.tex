@@ -1,0 +1,45 @@
+\doxysection{Comment.\+h}
+\hypertarget{_comment_8h_source}{}\label{_comment_8h_source}\index{backend/Comment.h@{backend/Comment.h}}
+\mbox{\hyperlink{_comment_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#ifndef\ COMMENT\_H}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ COMMENT\_H}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_comment_a6493d3b8a1bf7b13e5e163d8f7dff266}{Comment}}\ \{}
+\DoxyCodeLine{00020\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_comment_a78bbb323662e6cafd9cd8b91d68d41de}{commentID}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00022\ \ \ \ \ std::string\ \mbox{\hyperlink{class_comment_a91b525551b15917ac6f00e087faf7b56}{commentBody}};\ \ \ \ \ }
+\DoxyCodeLine{00023\ \ \ \ \ std::string\ \mbox{\hyperlink{class_comment_a718e2333b3612cf15186b3a820caa745}{commentDate}};\ \ \ \ \ }
+\DoxyCodeLine{00024\ \ \ \ \ std::string\ \mbox{\hyperlink{class_comment_ada1f67c5e6b5d87010a957010e7c821b}{commentStatus}};\ \ \ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_comment_a7bf232a3181150a1d1edc1420c546565}{commentUser}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{class_comment_a6493d3b8a1bf7b13e5e163d8f7dff266}{Comment}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_comment_a78bbb323662e6cafd9cd8b91d68d41de}{commentID}},\ \textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{class_comment_a91b525551b15917ac6f00e087faf7b56}{commentBody}},\ \textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{class_comment_a718e2333b3612cf15186b3a820caa745}{commentDate}},}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ \mbox{\hyperlink{class_comment_ada1f67c5e6b5d87010a957010e7c821b}{commentStatus}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_comment_a7bf232a3181150a1d1edc1420c546565}{commentUser}});}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_comment_aa0bcfcda44a70b3937ec19ff86851c08}{getCommentID}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00052\ \ \ \ \ std::string\ \mbox{\hyperlink{class_comment_aa278e69cfe6408f4d96f11ece17520cb}{getCommentBody}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00058\ \ \ \ \ std::string\ \mbox{\hyperlink{class_comment_af96db26fc7fd2a525c31fe290cd4c863}{getCommentDate}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00064\ \ \ \ \ std::string\ \mbox{\hyperlink{class_comment_a8b832e6dc03b9e05fcb8b75ece729b5f}{getCommentStatus}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_comment_aef9c86702602ee67925f9060ded4e66b}{getCommentUser}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_comment_a8ba6776c22a3b205666e5112eaef1b2a}{editCommentBody}}(\textcolor{keyword}{const}\ std::string\&\ newBody);}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_comment_ae8bcf813707d0bf7804767b034f23101}{editCommentDate}}(\textcolor{keyword}{const}\ std::string\&\ newDate);}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_comment_a4aa166c4ee0ae156f62c400cdb5054ef}{editCommentStatus}}(\textcolor{keyword}{const}\ std::string\&\ newStatus);}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_comment_a93125c19f29eac4be134e0c0b1d6283b}{deleteComment}}();}
+\DoxyCodeLine{00097\ \};}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ COMMENT\_H}}
+
+\end{DoxyCode}

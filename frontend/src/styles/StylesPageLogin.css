@@ -1,0 +1,136 @@
+:root {
+  --gradient-purple: #8d39ec;
+  --gradient-blue: #4039ec;
+  --smokewhite: rgb(245, 245, 245);
+}
+
+/* BACKGROUND */
+.container-background-login {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  /* background-color: whitesmoke; */
+   background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: #f1f1f1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* HEADER ICON */
+.container-icon {
+  width: 45%;
+  height: 40%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* background-color: blue; */
+  background: linear-gradient(
+    -20deg,
+    var(--gradient-purple),
+    var(--gradient-blue)
+  );
+  /* position: absolute; */
+  /* top: 10%; */
+
+  color: white;
+  font-size: 400%;
+  font-weight: 700;
+
+  border-radius: 5vh;
+
+  transition: transform 0.2s ease;
+
+  text-align: center;
+}
+.container-icon:hover {
+  transform: translateY(-0.75vh);
+}
+
+/* CONTAINTS INPUTS AND LOGIN BUTTON */
+.container-input {
+  width: 25%;
+  height: 25%;
+
+  /* background-color: blue; */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.input-field {
+  width: 100%;
+  height: 30%;
+
+  background-color: white;
+  border: 2px #1e1e1e solid;
+  border-radius: 10px;
+
+  font-size: 125%;
+
+  padding-left: 3.5%;
+}
+
+.button-login-submit {
+  width: 55%;
+  height: 20%;
+
+  background: linear-gradient(
+    -20deg,
+    var(--gradient-purple),
+    var(--gradient-blue)
+  );
+  border: none;
+  border-radius: 10px;
+
+  color: white;
+  font-size: 100%;
+
+  transition: transform 0.2s ease;
+}
+.button-login-submit:hover {
+  filter: brightness(0.9);
+  transform: translateY(-0.25vh);
+}
+.button-login-submit:active {
+  filter: brightness(0.8);
+}
+
+.message-login-fail {
+  position: fixed;
+  bottom: 3.5%;
+  font-size: 125%;
+}
+
+span {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+span:hover {
+  font-weight: bold;
+}
+
+@media (max-width: 868px) {
+  .container-icon {
+    font-size: 2.2rem !important;
+  }
+  .button-login-submit{
+    font-size: 0.8rem !important;
+  }
+
+  p {
+    text-align: center;
+  }
+}
+

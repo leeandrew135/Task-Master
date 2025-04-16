@@ -1,0 +1,235 @@
+\doxysection{User Class Reference}
+\hypertarget{class_user}{}\label{class_user}\index{User@{User}}
+
+
+Represents a user with associated profile information and projects.  
+
+
+
+
+{\ttfamily \#include $<$User.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_user_a974a68a2a0763e24f6cd408d7dcd25ca}{User}} (int \mbox{\hyperlink{class_user_a2763d16d115f2a3be14689c378b434c8}{user\+ID}}, const std\+::string \&\mbox{\hyperlink{class_user_aa4b0e6b11e45dd1329738430a8904ff9}{user\+Name}}, const std\+::string \&\mbox{\hyperlink{class_user_ab1beb59ea9cfceab424cccc67d6fc8da}{user\+Email}}, const std\+::string \&\mbox{\hyperlink{class_user_a2168ed1e9459394ee1552eb22f7410ce}{user\+Password}})
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{class_user}{User} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_user_a128321abfbee83d67c921bd64bc088c8}{add\+Project}} (int project\+ID, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_project}{Project}} $>$ \&project)
+\begin{DoxyCompactList}\small\item\em Associate a project with the user. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_user_afb0b50d2844016cf06ca03d82eb34cbd}{remove\+Project}} (int project\+ID)
+\begin{DoxyCompactList}\small\item\em Remove a project from the user\textquotesingle{}s list. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_user_afd5eaa855f85fc92ea51c0d1e0565d62}{get\+User\+ID}} () const
+\begin{DoxyCompactList}\small\item\em Get the user\textquotesingle{}s unique ID. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_user_a7eff012d6182f6829329620d8e21b124}{get\+User\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Get the user\textquotesingle{}s name. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_user_aa7860384b69a04d2fec4a6a5e08bd0db}{get\+User\+Email}} () const
+\begin{DoxyCompactList}\small\item\em Get the user\textquotesingle{}s email. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_user_aae2f8fb15b18a0fc2e0a96d40b6590b6}{get\+User\+Password}} () const
+\begin{DoxyCompactList}\small\item\em Get the user\textquotesingle{}s password. \end{DoxyCompactList}\item 
+std\+::map$<$ int, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_project}{Project}} $>$ $>$ \mbox{\hyperlink{class_user_a95d694c81d46db64b3649d53c93575f6}{get\+User\+Projects}} () const
+\begin{DoxyCompactList}\small\item\em Get the user\textquotesingle{}s associated projects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_user_a2763d16d115f2a3be14689c378b434c8}\label{class_user_a2763d16d115f2a3be14689c378b434c8} 
+int {\bfseries user\+ID}
+\begin{DoxyCompactList}\small\item\em Unique identifier for the user. \end{DoxyCompactList}\item 
+\Hypertarget{class_user_aa4b0e6b11e45dd1329738430a8904ff9}\label{class_user_aa4b0e6b11e45dd1329738430a8904ff9} 
+std\+::string {\bfseries user\+Name}
+\begin{DoxyCompactList}\small\item\em The user\textquotesingle{}s name. \end{DoxyCompactList}\item 
+\Hypertarget{class_user_ab1beb59ea9cfceab424cccc67d6fc8da}\label{class_user_ab1beb59ea9cfceab424cccc67d6fc8da} 
+std\+::string {\bfseries user\+Email}
+\begin{DoxyCompactList}\small\item\em The user\textquotesingle{}s email address. \end{DoxyCompactList}\item 
+\Hypertarget{class_user_a2168ed1e9459394ee1552eb22f7410ce}\label{class_user_a2168ed1e9459394ee1552eb22f7410ce} 
+std\+::string {\bfseries user\+Password}
+\begin{DoxyCompactList}\small\item\em The user\textquotesingle{}s password. \end{DoxyCompactList}\item 
+\Hypertarget{class_user_a2347e7e85c051df41aae62ce273b84fe}\label{class_user_a2347e7e85c051df41aae62ce273b84fe} 
+std\+::map$<$ int, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_project}{Project}} $>$ $>$ {\bfseries user\+Projects}
+\begin{DoxyCompactList}\small\item\em Projects owned by the user, keyed by project ID. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a user with associated profile information and projects. 
+
+The \doxylink{class_user}{User} class manages user-\/related data such as ID, name, email, and password, along with a collection of projects linked to the user. It provides functionality to add or remove projects and retrieve user details.
+
+\begin{DoxyAuthor}{Author}
+Robin 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_user_a974a68a2a0763e24f6cd408d7dcd25ca}\index{User@{User}!User@{User}}
+\index{User@{User}!User@{User}}
+\doxysubsubsection{\texorpdfstring{User()}{User()}}
+{\footnotesize\ttfamily \label{class_user_a974a68a2a0763e24f6cd408d7dcd25ca} 
+User\+::\+User (\begin{DoxyParamCaption}\item[{int}]{user\+ID}{, }\item[{const std\+::string \&}]{user\+Name}{, }\item[{const std\+::string \&}]{user\+Email}{, }\item[{const std\+::string \&}]{user\+Password}{}\end{DoxyParamCaption})}
+
+
+
+Construct a new \doxylink{class_user}{User} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user\+ID} & The unique ID for the user. \\
+\hline
+{\em user\+Name} & The name of the user. \\
+\hline
+{\em user\+Email} & The email address of the user. \\
+\hline
+{\em user\+Password} & The password of the user.\\
+\hline
+\end{DoxyParams}
+Initializes a user with the given ID, name, email, and password.
+
+
+\begin{DoxyParams}{Parameters}
+{\em user\+ID} & The unique ID of the user. \\
+\hline
+{\em user\+Name} & The name of the user. \\
+\hline
+{\em user\+Email} & The email address of the user. \\
+\hline
+{\em user\+Password} & The user\textquotesingle{}s password.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Robin 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_user_a128321abfbee83d67c921bd64bc088c8}\index{User@{User}!addProject@{addProject}}
+\index{addProject@{addProject}!User@{User}}
+\doxysubsubsection{\texorpdfstring{addProject()}{addProject()}}
+{\footnotesize\ttfamily \label{class_user_a128321abfbee83d67c921bd64bc088c8} 
+void User\+::add\+Project (\begin{DoxyParamCaption}\item[{int}]{project\+ID}{, }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_project}{Project}} $>$ \&}]{project}{}\end{DoxyParamCaption})}
+
+
+
+Associate a project with the user. 
+
+Add a project to the user\textquotesingle{}s list of projects.
+
+
+\begin{DoxyParams}{Parameters}
+{\em project\+ID} & The unique ID of the project. \\
+\hline
+{\em project} & A shared pointer to the \doxylink{class_project}{Project} instance.\\
+\hline
+{\em project\+ID} & The ID of the project. \\
+\hline
+{\em project} & A shared pointer to the \doxylink{class_project}{Project} object. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_user_aa7860384b69a04d2fec4a6a5e08bd0db}\index{User@{User}!getUserEmail@{getUserEmail}}
+\index{getUserEmail@{getUserEmail}!User@{User}}
+\doxysubsubsection{\texorpdfstring{getUserEmail()}{getUserEmail()}}
+{\footnotesize\ttfamily \label{class_user_aa7860384b69a04d2fec4a6a5e08bd0db} 
+std\+::string User\+::get\+User\+Email (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the user\textquotesingle{}s email. 
+
+Get the user\textquotesingle{}s email address.
+
+\begin{DoxyReturn}{Returns}
+The user\textquotesingle{}s email as a string.
+
+The user email as a string. 
+\end{DoxyReturn}
+\Hypertarget{class_user_afd5eaa855f85fc92ea51c0d1e0565d62}\index{User@{User}!getUserID@{getUserID}}
+\index{getUserID@{getUserID}!User@{User}}
+\doxysubsubsection{\texorpdfstring{getUserID()}{getUserID()}}
+{\footnotesize\ttfamily \label{class_user_afd5eaa855f85fc92ea51c0d1e0565d62} 
+int User\+::get\+User\+ID (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the user\textquotesingle{}s unique ID. 
+
+Get the user\textquotesingle{}s ID.
+
+\begin{DoxyReturn}{Returns}
+The user\textquotesingle{}s ID as an integer.
+
+The user ID as an integer. 
+\end{DoxyReturn}
+\Hypertarget{class_user_a7eff012d6182f6829329620d8e21b124}\index{User@{User}!getUserName@{getUserName}}
+\index{getUserName@{getUserName}!User@{User}}
+\doxysubsubsection{\texorpdfstring{getUserName()}{getUserName()}}
+{\footnotesize\ttfamily \label{class_user_a7eff012d6182f6829329620d8e21b124} 
+std\+::string User\+::get\+User\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the user\textquotesingle{}s name. 
+
+\begin{DoxyReturn}{Returns}
+The user\textquotesingle{}s name as a string.
+
+The user name as a string. 
+\end{DoxyReturn}
+\Hypertarget{class_user_aae2f8fb15b18a0fc2e0a96d40b6590b6}\index{User@{User}!getUserPassword@{getUserPassword}}
+\index{getUserPassword@{getUserPassword}!User@{User}}
+\doxysubsubsection{\texorpdfstring{getUserPassword()}{getUserPassword()}}
+{\footnotesize\ttfamily \label{class_user_aae2f8fb15b18a0fc2e0a96d40b6590b6} 
+std\+::string User\+::get\+User\+Password (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the user\textquotesingle{}s password. 
+
+\begin{DoxyReturn}{Returns}
+The user\textquotesingle{}s password as a string.
+
+The user password as a string. 
+\end{DoxyReturn}
+\Hypertarget{class_user_a95d694c81d46db64b3649d53c93575f6}\index{User@{User}!getUserProjects@{getUserProjects}}
+\index{getUserProjects@{getUserProjects}!User@{User}}
+\doxysubsubsection{\texorpdfstring{getUserProjects()}{getUserProjects()}}
+{\footnotesize\ttfamily \label{class_user_a95d694c81d46db64b3649d53c93575f6} 
+std\+::map$<$ int, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_project}{Project}} $>$ $>$ User\+::get\+User\+Projects (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the user\textquotesingle{}s associated projects. 
+
+Get all projects associated with this user.
+
+\begin{DoxyReturn}{Returns}
+A map of project IDs to shared \doxylink{class_project}{Project} pointers.
+
+A map of project IDs to shared pointers to \doxylink{class_project}{Project} objects. 
+\end{DoxyReturn}
+\Hypertarget{class_user_afb0b50d2844016cf06ca03d82eb34cbd}\index{User@{User}!removeProject@{removeProject}}
+\index{removeProject@{removeProject}!User@{User}}
+\doxysubsubsection{\texorpdfstring{removeProject()}{removeProject()}}
+{\footnotesize\ttfamily \label{class_user_afb0b50d2844016cf06ca03d82eb34cbd} 
+void User\+::remove\+Project (\begin{DoxyParamCaption}\item[{int}]{project\+ID}{}\end{DoxyParamCaption})}
+
+
+
+Remove a project from the user\textquotesingle{}s list. 
+
+Remove a project from the user\textquotesingle{}s list by ID.
+
+
+\begin{DoxyParams}{Parameters}
+{\em project\+ID} & The ID of the project to be removed.\\
+\hline
+\end{DoxyParams}
+Does nothing if the project is not found.
+
+
+\begin{DoxyParams}{Parameters}
+{\em project\+ID} & The ID of the project to remove. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+backend/User.\+h\item 
+backend/User.\+cpp\end{DoxyCompactItemize}

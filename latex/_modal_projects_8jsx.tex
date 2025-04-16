@@ -1,0 +1,58 @@
+\doxysection{frontend/src/components/\+Home/\+Modal\+Projects.jsx File Reference}
+\hypertarget{_modal_projects_8jsx}{}\label{_modal_projects_8jsx}\index{frontend/src/components/Home/ModalProjects.jsx@{frontend/src/components/Home/ModalProjects.jsx}}
+
+
+@component Modal\+Projects  
+
+
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_modal_projects_8jsx_a90a569d885feeab49087b7e510499582}\label{_modal_projects_8jsx_a90a569d885feeab49087b7e510499582} 
+import styles Modal\+Projects {\bfseries css}
+\item 
+\Hypertarget{_modal_projects_8jsx_a59be084da8908b7d77ff34b25cd84488}\label{_modal_projects_8jsx_a59be084da8908b7d77ff34b25cd84488} 
+{\bfseries import} \{ use\+State \} from "{}react"{}
+\item 
+\Hypertarget{_modal_projects_8jsx_ad401c8c6d68e179c0752fbd0a16f7250}\label{_modal_projects_8jsx_ad401c8c6d68e179c0752fbd0a16f7250} 
+import Button\+Project\+Select from {\bfseries Button\+Project\+Select}
+\item 
+\Hypertarget{_modal_projects_8jsx_ae92d6ad5895579f48673cb0f3174ab4b}\label{_modal_projects_8jsx_ae92d6ad5895579f48673cb0f3174ab4b} 
+const {\bfseries Modal\+Projects}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+@component Modal\+Projects 
+
+A modal that displays and manages user projects.
+
+This component allows users to\+:
+\begin{DoxyItemize}
+\item View a list of their projects
+\item Navigate to a project page
+\item Delete a project
+\item Create a new project and assign it to themselves
+\end{DoxyItemize}
+
+The modal toggles between selection and creation modes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \{\+Array\}} & user\+Projects -\/ Array of project objects associated with the user. \\
+\hline
+{\em \{\+Function\}} & on\+Click -\/ Callback triggered when the background is clicked (used to close modal). \\
+\hline
+{\em \{string\}} & username -\/ The name of the user. \\
+\hline
+{\em \{\+Function\}} & refresh\+Projects -\/ Function to refresh the project list after create/delete. \\
+\hline
+{\em \{\+Function\}} & refresh\+Tasks -\/ Function to refresh the task list after deleting a project.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\{JSX.\+Element\} A full-\/screen modal UI for managing projects.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Robin Andrew 
+\end{DoxyAuthor}

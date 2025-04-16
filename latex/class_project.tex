@@ -1,0 +1,287 @@
+\doxysection{Project Class Reference}
+\hypertarget{class_project}{}\label{class_project}\index{Project@{Project}}
+
+
+Represents a project with tasks, users, and progress tracking.  
+
+
+
+
+{\ttfamily \#include $<$Project.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_project_a338bf35a366dd8b2ccef33864fd58b8b}{Project}} (\mbox{\hyperlink{class_todo_list}{Todo\+List}} \mbox{\hyperlink{class_project_a1930daff4f01facc35adf413dcb3b397}{list}}, std\+::string \mbox{\hyperlink{class_project_adfd21159384002aec430813909879bd3}{deadline}}, bool \mbox{\hyperlink{class_project_a6b6db72d6d7031641c719b0b1751f15b}{completion\+Status}}=false)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_project}{Project} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_project_a0bff4014c4c7dc8156fb813f183702ad}{add\+Task}} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em Adds a new task to the project\textquotesingle{}s task list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_project_a1b900b9599f6d1f768820768490525f8}{add\+User}} (\mbox{\hyperlink{class_user}{User}} \texorpdfstring{$\ast$}{*}user)
+\begin{DoxyCompactList}\small\item\em Adds a user to the project\textquotesingle{}s user list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_project_aaa4058fc80d135d2f91ba41864ee19ec}{change\+Deadline}} (std\+::string \mbox{\hyperlink{class_project_a4eb016a6b9801d234292166833b601e3}{date}})
+\begin{DoxyCompactList}\small\item\em Updates the deadline of the project. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_project_a7a748941c5eaaa8a38af158702dfc865}{mark\+Complete}} (bool status)
+\begin{DoxyCompactList}\small\item\em Sets the completion status of the project. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_project_ac00ba28753f3df7bf69f05a6290712fd}{get\+Date}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the creation date of the project. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_project_a4b9bbdf3cd903fde24038259bd0bbd68}{get\+Deadline}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the project\textquotesingle{}s deadline. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_project_a69da087e9305854d57173c9d48869a80}{is\+Complete}} () const
+\begin{DoxyCompactList}\small\item\em Checks whether the project is complete. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_user}{User}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_project_a589e67eb3fa53f03e1a5d47fa9dfefbb}{get\+Users}} () const
+\begin{DoxyCompactList}\small\item\em Gets the list of users assigned to the project. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_project_a61f8a18fd2fcc9a3eafd3d31f273410b}{operator==}} (const \mbox{\hyperlink{class_project}{Project}} \&other) const
+\begin{DoxyCompactList}\small\item\em Equality operator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_project_a1930daff4f01facc35adf413dcb3b397}\label{class_project_a1930daff4f01facc35adf413dcb3b397} 
+\mbox{\hyperlink{class_todo_list}{Todo\+List}} {\bfseries list}
+\begin{DoxyCompactList}\small\item\em To-\/do list of the project. \end{DoxyCompactList}\item 
+\Hypertarget{class_project_a7182abd3d088794bb4366dc1b01a0cba}\label{class_project_a7182abd3d088794bb4366dc1b01a0cba} 
+std\+::vector$<$ \mbox{\hyperlink{class_user}{User}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries user\+List}
+\begin{DoxyCompactList}\small\item\em List of users assigned to the project. \end{DoxyCompactList}\item 
+\Hypertarget{class_project_a4eb016a6b9801d234292166833b601e3}\label{class_project_a4eb016a6b9801d234292166833b601e3} 
+std\+::string {\bfseries date}
+\begin{DoxyCompactList}\small\item\em Creation date of the project. \end{DoxyCompactList}\item 
+\Hypertarget{class_project_adfd21159384002aec430813909879bd3}\label{class_project_adfd21159384002aec430813909879bd3} 
+std\+::string {\bfseries deadline}
+\begin{DoxyCompactList}\small\item\em Deadline for the project. \end{DoxyCompactList}\item 
+\Hypertarget{class_project_a6b6db72d6d7031641c719b0b1751f15b}\label{class_project_a6b6db72d6d7031641c719b0b1751f15b} 
+bool {\bfseries completion\+Status}
+\begin{DoxyCompactList}\small\item\em Indicates whether the project is complete. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a project with tasks, users, and progress tracking. 
+
+Each project tracks a to-\/do list, participating users, a creation date, a deadline, and whether the project is completed. Provides functionality to add tasks/users and update key attributes. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_project_a338bf35a366dd8b2ccef33864fd58b8b}\index{Project@{Project}!Project@{Project}}
+\index{Project@{Project}!Project@{Project}}
+\doxysubsubsection{\texorpdfstring{Project()}{Project()}}
+{\footnotesize\ttfamily \label{class_project_a338bf35a366dd8b2ccef33864fd58b8b} 
+Project\+::\+Project (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_todo_list}{Todo\+List}}}]{list}{, }\item[{std\+::string}]{deadline}{, }\item[{bool}]{completion\+Status}{ = {\ttfamily false}}\end{DoxyParamCaption})}
+
+
+
+Constructor for the \doxylink{class_project}{Project} class. 
+
+Constructs a \doxylink{class_project}{Project} object with default date.
+
+Initializes a project with a to-\/do list, a deadline, and an optional completion status. The creation date is automatically set to the current date at instantiation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & The \doxylink{class_todo_list}{Todo\+List} associated with this project. \\
+\hline
+{\em deadline} & Deadline date in YYYY-\/\+MM-\/\+DD format. \\
+\hline
+{\em completion\+Status} & Initial completion status (default is false).\\
+\hline
+\end{DoxyParams}
+Initializes the project with a to-\/do list, a deadline, and a completion status. The date is set to the current date at the time of creation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & A \doxylink{class_todo_list}{Todo\+List} object containing initial tasks. \\
+\hline
+{\em deadline} & A string representing the project deadline (YYYY-\/\+MM-\/\+DD). \\
+\hline
+{\em completion\+Status} & Boolean indicating whether the project is complete. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_project_a0bff4014c4c7dc8156fb813f183702ad}\index{Project@{Project}!addTask@{addTask}}
+\index{addTask@{addTask}!Project@{Project}}
+\doxysubsubsection{\texorpdfstring{addTask()}{addTask()}}
+{\footnotesize\ttfamily \label{class_project_a0bff4014c4c7dc8156fb813f183702ad} 
+void Project\+::add\+Task (\begin{DoxyParamCaption}\item[{std\+::string}]{name}{}\end{DoxyParamCaption})}
+
+
+
+Adds a new task to the project\textquotesingle{}s task list. 
+
+Adds a new task to the project\textquotesingle{}s to-\/do list.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the task to be added.\\
+\hline
+\end{DoxyParams}
+The task is created with a random ID, the given name, today\textquotesingle{}s date, and default values for status and priority.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name/title of the task. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_project_a1b900b9599f6d1f768820768490525f8}\index{Project@{Project}!addUser@{addUser}}
+\index{addUser@{addUser}!Project@{Project}}
+\doxysubsubsection{\texorpdfstring{addUser()}{addUser()}}
+{\footnotesize\ttfamily \label{class_project_a1b900b9599f6d1f768820768490525f8} 
+void Project\+::add\+User (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_user}{User}} \texorpdfstring{$\ast$}{*}}]{user}{}\end{DoxyParamCaption})}
+
+
+
+Adds a user to the project\textquotesingle{}s user list. 
+
+Adds a user to the project.
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & A pointer to the \doxylink{class_user}{User} to be added to the project.\\
+\hline
+\end{DoxyParams}
+Appends the given user pointer to the list of users assigned to the project.
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & Pointer to the \doxylink{class_user}{User} object to be added. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_project_aaa4058fc80d135d2f91ba41864ee19ec}\index{Project@{Project}!changeDeadline@{changeDeadline}}
+\index{changeDeadline@{changeDeadline}!Project@{Project}}
+\doxysubsubsection{\texorpdfstring{changeDeadline()}{changeDeadline()}}
+{\footnotesize\ttfamily \label{class_project_aaa4058fc80d135d2f91ba41864ee19ec} 
+void Project\+::change\+Deadline (\begin{DoxyParamCaption}\item[{std\+::string}]{new\+Deadline}{}\end{DoxyParamCaption})}
+
+
+
+Updates the deadline of the project. 
+
+Changes the project\textquotesingle{}s deadline.
+
+
+\begin{DoxyParams}{Parameters}
+{\em date} & The new deadline in YYYY-\/\+MM-\/\+DD format.\\
+\hline
+\end{DoxyParams}
+Updates the deadline to the new specified date string.
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Deadline} & The new deadline in YYYY-\/\+MM-\/\+DD format. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_project_ac00ba28753f3df7bf69f05a6290712fd}\index{Project@{Project}!getDate@{getDate}}
+\index{getDate@{getDate}!Project@{Project}}
+\doxysubsubsection{\texorpdfstring{getDate()}{getDate()}}
+{\footnotesize\ttfamily \label{class_project_ac00ba28753f3df7bf69f05a6290712fd} 
+std\+::string Project\+::get\+Date (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the creation date of the project. 
+
+Gets the creation date of the project.
+
+\begin{DoxyReturn}{Returns}
+A string representing the creation date in YYYY-\/\+MM-\/\+DD format.
+
+std\+::string The creation date in YYYY-\/\+MM-\/\+DD format. 
+\end{DoxyReturn}
+\Hypertarget{class_project_a4b9bbdf3cd903fde24038259bd0bbd68}\index{Project@{Project}!getDeadline@{getDeadline}}
+\index{getDeadline@{getDeadline}!Project@{Project}}
+\doxysubsubsection{\texorpdfstring{getDeadline()}{getDeadline()}}
+{\footnotesize\ttfamily \label{class_project_a4b9bbdf3cd903fde24038259bd0bbd68} 
+std\+::string Project\+::get\+Deadline (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Retrieves the project\textquotesingle{}s deadline. 
+
+Gets the project\textquotesingle{}s deadline.
+
+\begin{DoxyReturn}{Returns}
+A string representing the deadline in YYYY-\/\+MM-\/\+DD format.
+
+std\+::string The deadline in YYYY-\/\+MM-\/\+DD format. 
+\end{DoxyReturn}
+\Hypertarget{class_project_a589e67eb3fa53f03e1a5d47fa9dfefbb}\index{Project@{Project}!getUsers@{getUsers}}
+\index{getUsers@{getUsers}!Project@{Project}}
+\doxysubsubsection{\texorpdfstring{getUsers()}{getUsers()}}
+{\footnotesize\ttfamily \label{class_project_a589e67eb3fa53f03e1a5d47fa9dfefbb} 
+std\+::vector$<$ \mbox{\hyperlink{class_user}{User}} \texorpdfstring{$\ast$}{*} $>$ Project\+::get\+Users (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the list of users assigned to the project. 
+
+Retrieves the list of users associated with the project.
+
+\begin{DoxyReturn}{Returns}
+A vector of \doxylink{class_user}{User} pointers.
+
+std\+::vector$<$\+User\texorpdfstring{$\ast$}{*}$>$ A vector of pointers to \doxylink{class_user}{User} objects. 
+\end{DoxyReturn}
+\Hypertarget{class_project_a69da087e9305854d57173c9d48869a80}\index{Project@{Project}!isComplete@{isComplete}}
+\index{isComplete@{isComplete}!Project@{Project}}
+\doxysubsubsection{\texorpdfstring{isComplete()}{isComplete()}}
+{\footnotesize\ttfamily \label{class_project_a69da087e9305854d57173c9d48869a80} 
+bool Project\+::is\+Complete (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Checks whether the project is complete. 
+
+Checks if the project is complete.
+
+\begin{DoxyReturn}{Returns}
+True if complete, false otherwise.
+
+true if the project is complete, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_project_a7a748941c5eaaa8a38af158702dfc865}\index{Project@{Project}!markComplete@{markComplete}}
+\index{markComplete@{markComplete}!Project@{Project}}
+\doxysubsubsection{\texorpdfstring{markComplete()}{markComplete()}}
+{\footnotesize\ttfamily \label{class_project_a7a748941c5eaaa8a38af158702dfc865} 
+void Project\+::mark\+Complete (\begin{DoxyParamCaption}\item[{bool}]{status}{}\end{DoxyParamCaption})}
+
+
+
+Sets the completion status of the project. 
+
+Marks the project as complete or incomplete.
+
+
+\begin{DoxyParams}{Parameters}
+{\em status} & True if the project is complete, false otherwise.\\
+\hline
+\end{DoxyParams}
+Updates the project\textquotesingle{}s completion status.
+
+
+\begin{DoxyParams}{Parameters}
+{\em status} & True if the project is complete, false otherwise. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_project_a61f8a18fd2fcc9a3eafd3d31f273410b}\index{Project@{Project}!operator==@{operator==}}
+\index{operator==@{operator==}!Project@{Project}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily \label{class_project_a61f8a18fd2fcc9a3eafd3d31f273410b} 
+bool Project\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_project}{Project}} \&}]{other}{}\end{DoxyParamCaption}) const}
+
+
+
+Equality operator. 
+
+Projects are considered equal if they share the same deadline and creation date.
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The other \doxylink{class_project}{Project} to compare against. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the projects have the same deadline and date, false otherwise. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+backend/\mbox{\hyperlink{_project_8h}{Project.\+h}}\item 
+backend/\mbox{\hyperlink{_project_8cpp}{Project.\+cpp}}\end{DoxyCompactItemize}

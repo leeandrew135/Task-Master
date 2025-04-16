@@ -1,0 +1,84 @@
+\doxysection{frontend/src/pages/\+Kanban.jsx File Reference}
+\hypertarget{_kanban_8jsx}{}\label{_kanban_8jsx}\index{frontend/src/pages/Kanban.jsx@{frontend/src/pages/Kanban.jsx}}
+
+
+React Kanban board for managing tasks within a project.  
+
+
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_kanban_8jsx_ab2aa4fea907ccba1cd0f73a0c2452529}\label{_kanban_8jsx_ab2aa4fea907ccba1cd0f73a0c2452529} 
+import styles Kanban {\bfseries css}
+\item 
+\Hypertarget{_kanban_8jsx_a59be084da8908b7d77ff34b25cd84488}\label{_kanban_8jsx_a59be084da8908b7d77ff34b25cd84488} 
+{\bfseries import} \{ use\+State, use\+Effect \} from "{}react"{}
+\item 
+\Hypertarget{_kanban_8jsx_a126d8b1ad46124662ede7a063108cc87}\label{_kanban_8jsx_a126d8b1ad46124662ede7a063108cc87} 
+import Modal from components Home {\bfseries Modal}
+\item 
+\Hypertarget{_kanban_8jsx_aecbc273df562a6fad358bd3c2bcee40b}\label{_kanban_8jsx_aecbc273df562a6fad358bd3c2bcee40b} 
+import Kanban\+Column from components Home {\bfseries Kanban\+Column}
+\item 
+const \mbox{\hyperlink{_kanban_8jsx_ac005a4022ad2fea8e2286df2999a9316}{Kanban}}
+\begin{DoxyCompactList}\small\item\em @component Kanban \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{_kanban_8jsx_a7eab37a9dd6e70f792eac2da0e017737}{Delete\+Zone}}
+\begin{DoxyCompactList}\small\item\em @component Delete\+Zone \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+React Kanban board for managing tasks within a project. 
+
+This component renders a dynamic Kanban board using dnd-\/kit for drag-\/and-\/drop, allows adding tasks and users to a project, and provides sorting/filtering options.
+
+@component Kanban \begin{DoxyAuthor}{Author}
+Ali Robin 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{_kanban_8jsx_a7eab37a9dd6e70f792eac2da0e017737}\index{Kanban.jsx@{Kanban.jsx}!DeleteZone@{DeleteZone}}
+\index{DeleteZone@{DeleteZone}!Kanban.jsx@{Kanban.jsx}}
+\doxysubsubsection{\texorpdfstring{DeleteZone}{DeleteZone}}
+{\footnotesize\ttfamily \label{_kanban_8jsx_a7eab37a9dd6e70f792eac2da0e017737} 
+const Delete\+Zone}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ ()\ =>\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \{\ setNodeRef\ \}\ =\ useDroppable(\{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ id:\ \textcolor{stringliteral}{"{}delete"{}}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ <div\ ref=\{setNodeRef\}\ className=\textcolor{stringliteral}{"{}kanban-\/column\ delete-\/zone"{}}>}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <h2>Delete</h2>}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ </div>}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{\ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+@component Delete\+Zone 
+
+A droppable area for removing tasks.
+
+\begin{DoxyReturn}{Returns}
+\{JSX.\+Element\} The delete zone column. 
+\end{DoxyReturn}
+\Hypertarget{_kanban_8jsx_ac005a4022ad2fea8e2286df2999a9316}\index{Kanban.jsx@{Kanban.jsx}!Kanban@{Kanban}}
+\index{Kanban@{Kanban}!Kanban.jsx@{Kanban.jsx}}
+\doxysubsubsection{\texorpdfstring{Kanban}{Kanban}}
+{\footnotesize\ttfamily \label{_kanban_8jsx_ac005a4022ad2fea8e2286df2999a9316} 
+export default Kanban}
+
+
+
+@component Kanban 
+
+Main Kanban board UI with drag-\/and-\/drop task management.
+
+\begin{DoxyReturn}{Returns}
+\{JSX.\+Element\} The rendered Kanban board. 
+\end{DoxyReturn}

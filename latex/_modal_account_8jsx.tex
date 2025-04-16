@@ -1,0 +1,73 @@
+\doxysection{frontend/src/components/\+Home/\+Modal\+Account.jsx File Reference}
+\hypertarget{_modal_account_8jsx}{}\label{_modal_account_8jsx}\index{frontend/src/components/Home/ModalAccount.jsx@{frontend/src/components/Home/ModalAccount.jsx}}
+
+
+@component Modal\+Account  
+
+
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_modal_account_8jsx_a4830287a685430e822b6b3d64c5ec6e5}\label{_modal_account_8jsx_a4830287a685430e822b6b3d64c5ec6e5} 
+import styles Modal\+Account {\bfseries css}
+\item 
+\Hypertarget{_modal_account_8jsx_a59be084da8908b7d77ff34b25cd84488}\label{_modal_account_8jsx_a59be084da8908b7d77ff34b25cd84488} 
+{\bfseries import} \{ use\+State \} from "{}react"{}
+\item 
+\Hypertarget{_modal_account_8jsx_ad401c8c6d68e179c0752fbd0a16f7250}\label{_modal_account_8jsx_ad401c8c6d68e179c0752fbd0a16f7250} 
+import Button\+Project\+Select from {\bfseries Button\+Project\+Select}
+\item 
+const \mbox{\hyperlink{_modal_account_8jsx_ad7a4b669b1c07f2ffe8f624c16a62615}{Modal\+Account}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+@component Modal\+Account 
+
+A modal for displaying or managing account-\/related features (e.\+g., profile, settings).
+
+This modal appears over the screen and can be closed by clicking the background. Currently, it renders an empty container but can be expanded to include account options.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \{\+Function\}} & on\+Click -\/ Callback to close the modal (triggered by background click). \\
+\hline
+{\em \{string\}} & username -\/ The current user\textquotesingle{}s username (can be displayed later if needed).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\{JSX.\+Element\} A basic modal wrapper for account-\/related content.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Andrew 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{_modal_account_8jsx_ad7a4b669b1c07f2ffe8f624c16a62615}\index{ModalAccount.jsx@{ModalAccount.jsx}!ModalAccount@{ModalAccount}}
+\index{ModalAccount@{ModalAccount}!ModalAccount.jsx@{ModalAccount.jsx}}
+\doxysubsubsection{\texorpdfstring{ModalAccount}{ModalAccount}}
+{\footnotesize\ttfamily \label{_modal_account_8jsx_ad7a4b669b1c07f2ffe8f624c16a62615} 
+export default Modal\+Account}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ (\{\ onClick,\ username\ \})\ =>\ \{}
+\DoxyCodeLine{\ \ }
+\DoxyCodeLine{\ \ \textcolor{keyword}{const}\ backgroundClicked\ =\ ()\ =>\ \{}
+\DoxyCodeLine{\ \ \ \ onClick();}
+\DoxyCodeLine{\ \ \};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{return}\ (}
+\DoxyCodeLine{\ \ \ \ <div\ className=\textcolor{stringliteral}{"{}modal-\/background"{}}\ onClick=\{backgroundClicked\}>}
+\DoxyCodeLine{\ \ \ \ \ \ <div}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ className=\textcolor{stringliteral}{"{}container-\/home-\/modal"{}}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ onClick=\{(e)\ =>\ e.stopPropagation()\}}
+\DoxyCodeLine{\ \ \ \ \ \ >}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{\}}
+\DoxyCodeLine{\ \ \ \ \ \ </div>}
+\DoxyCodeLine{\ \ \ \ </div>}
+\DoxyCodeLine{\ \ );}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}

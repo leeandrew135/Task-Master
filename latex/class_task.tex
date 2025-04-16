@@ -1,0 +1,351 @@
+\doxysection{Task Class Reference}
+\hypertarget{class_task}{}\label{class_task}\index{Task@{Task}}
+
+
+Represents a task with properties such as name, date, status, priority, and description.  
+
+
+
+
+{\ttfamily \#include $<$Task.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_task_a337bbca67c044140bef55c16f7b18119}{Task}} (int \mbox{\hyperlink{class_task_affe5b96d27698e0572ee12d6b88c9271}{task\+ID}}, std\+::string \mbox{\hyperlink{class_task_a36551b2c460ad511f54cbf203e309917}{task\+Name}}, std\+::string \mbox{\hyperlink{class_task_ae543334b6ea634f5df1f2577f345c06f}{task\+Date}}, std\+::string \mbox{\hyperlink{class_task_a40ce9b0d1e81f98f8820b915827568f4}{task\+Status}}, std\+::string \mbox{\hyperlink{class_task_aba6c4f32be8522296a2b44cd60e59cf4}{task\+Priority}}, std\+::string \mbox{\hyperlink{class_task_a5cde57432e25aa7cdb18553c5bb40bd8}{task\+Desc}}="{}"{})
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{class_task}{Task} object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_task_a5f18a9e4547bf36a10f5a8ade368c7d0}{get\+Task\+ID}} () const
+\begin{DoxyCompactList}\small\item\em Get the task\textquotesingle{}s ID. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_task_ae67c9b2478f4a0778ddcdcb2dab34bf3}{get\+Task\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Get the task\textquotesingle{}s name. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_task_a0cbe0b3ae29c78a63497c9677c09bef8}{get\+Task\+Date}} () const
+\begin{DoxyCompactList}\small\item\em Get the task\textquotesingle{}s date. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_task_af21640ae0a026cbcc7805c7932f39041}{get\+Task\+Status}} () const
+\begin{DoxyCompactList}\small\item\em Get the task\textquotesingle{}s status. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_task_af738b04e52bc20c94c1f0136e3fbde73}{get\+Task\+Desc}} () const
+\begin{DoxyCompactList}\small\item\em Get the task\textquotesingle{}s description. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_task_a71e2cc01380c5d0323f4274a28da7a37}{get\+Task\+Priority}} () const
+\begin{DoxyCompactList}\small\item\em Get the task\textquotesingle{}s priority. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_task_a3c99b409c104d2c25d0c3ef8fbaf6b6d}{edit\+Task\+Name}} (const std\+::string \&new\+Name)
+\begin{DoxyCompactList}\small\item\em Edit the name of the task. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_task_a8b2992711ccf4e2725110f049bd56e42}{edit\+Task\+Date}} (const std\+::string \&new\+Date)
+\begin{DoxyCompactList}\small\item\em Edit the date of the task. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_task_a134146c48ed089426a318d44c012afba}{edit\+Task\+Status}} (const std\+::string \&new\+Status)
+\begin{DoxyCompactList}\small\item\em Edit the status of the task. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_task_a2ca13fac9f4669b7e1e0f1579c1aab00}{edit\+Task\+Desc}} (const std\+::string \&new\+Desc)
+\begin{DoxyCompactList}\small\item\em Edit the task\textquotesingle{}s description. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_task_adc3d7a622569d69542f21886d14a8d72}{edit\+Task\+Priority}} (const std\+::string \&new\+Priority)
+\begin{DoxyCompactList}\small\item\em Edit the task\textquotesingle{}s priority. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_task_a230defcf930aaeca2ed8eaceb3f7893c}{display\+Task}} () const
+\begin{DoxyCompactList}\small\item\em Print task details to standard output. \end{DoxyCompactList}\item 
+crow\+::json\+::wvalue \mbox{\hyperlink{class_task_a3121935a32b226f56babc55dec2bb81c}{to\+JSON}} () const
+\begin{DoxyCompactList}\small\item\em Convert the task into JSON format. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_task_affe5b96d27698e0572ee12d6b88c9271}\label{class_task_affe5b96d27698e0572ee12d6b88c9271} 
+int {\bfseries task\+ID}
+\begin{DoxyCompactList}\small\item\em Unique identifier for the task. \end{DoxyCompactList}\item 
+\Hypertarget{class_task_a36551b2c460ad511f54cbf203e309917}\label{class_task_a36551b2c460ad511f54cbf203e309917} 
+std\+::string {\bfseries task\+Name}
+\begin{DoxyCompactList}\small\item\em Name or title of the task. \end{DoxyCompactList}\item 
+\Hypertarget{class_task_ae543334b6ea634f5df1f2577f345c06f}\label{class_task_ae543334b6ea634f5df1f2577f345c06f} 
+std\+::string {\bfseries task\+Date}
+\begin{DoxyCompactList}\small\item\em Date assigned to the task. \end{DoxyCompactList}\item 
+\Hypertarget{class_task_a40ce9b0d1e81f98f8820b915827568f4}\label{class_task_a40ce9b0d1e81f98f8820b915827568f4} 
+std\+::string {\bfseries task\+Status}
+\begin{DoxyCompactList}\small\item\em Current status (e.\+g., pending, done) \end{DoxyCompactList}\item 
+\Hypertarget{class_task_a5cde57432e25aa7cdb18553c5bb40bd8}\label{class_task_a5cde57432e25aa7cdb18553c5bb40bd8} 
+std\+::string {\bfseries task\+Desc}
+\begin{DoxyCompactList}\small\item\em Description of the task. \end{DoxyCompactList}\item 
+\Hypertarget{class_task_aba6c4f32be8522296a2b44cd60e59cf4}\label{class_task_aba6c4f32be8522296a2b44cd60e59cf4} 
+std\+::string {\bfseries task\+Priority}
+\begin{DoxyCompactList}\small\item\em Priority level of the task. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a task with properties such as name, date, status, priority, and description. 
+
+The \doxylink{class_task}{Task} class provides methods to create, edit, view, and convert task information to JSON format. It supports basic getter and setter functionality for all relevant fields.
+
+\begin{DoxyAuthor}{Author}
+Robin 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_task_a337bbca67c044140bef55c16f7b18119}\index{Task@{Task}!Task@{Task}}
+\index{Task@{Task}!Task@{Task}}
+\doxysubsubsection{\texorpdfstring{Task()}{Task()}}
+{\footnotesize\ttfamily \label{class_task_a337bbca67c044140bef55c16f7b18119} 
+Task\+::\+Task (\begin{DoxyParamCaption}\item[{int}]{task\+ID}{, }\item[{std\+::string}]{task\+Name}{, }\item[{std\+::string}]{task\+Date}{, }\item[{std\+::string}]{task\+Status}{, }\item[{std\+::string}]{task\+Priority}{, }\item[{std\+::string}]{task\+Desc}{ = {\ttfamily "{}"{}}}\end{DoxyParamCaption})}
+
+
+
+Construct a new \doxylink{class_task}{Task} object. 
+
+Initializes a task with the given ID, name, date, status, priority, and optional description.
+
+
+\begin{DoxyParams}{Parameters}
+{\em task\+ID} & The unique task ID. \\
+\hline
+{\em task\+Name} & The name of the task. \\
+\hline
+{\em task\+Date} & The date associated with the task. \\
+\hline
+{\em task\+Status} & The status of the task. \\
+\hline
+{\em task\+Priority} & The task\textquotesingle{}s priority. \\
+\hline
+{\em task\+Desc} & (Optional) A description of the task.\\
+\hline
+\end{DoxyParams}
+Initializes a task with the given parameters.
+
+
+\begin{DoxyParams}{Parameters}
+{\em task\+ID} & The unique ID of the task. (primary key) \\
+\hline
+{\em task\+Name} & The name or title of the task. \\
+\hline
+{\em task\+Date} & The date associated with the task. \\
+\hline
+{\em task\+Status} & The current status (backlog, in progress, completed). \\
+\hline
+{\em task\+Priority} & The priority level of the task. \\
+\hline
+{\em task\+Desc} & A description of the task.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Robin 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_task_a230defcf930aaeca2ed8eaceb3f7893c}\index{Task@{Task}!displayTask@{displayTask}}
+\index{displayTask@{displayTask}!Task@{Task}}
+\doxysubsubsection{\texorpdfstring{displayTask()}{displayTask()}}
+{\footnotesize\ttfamily \label{class_task_a230defcf930aaeca2ed8eaceb3f7893c} 
+void Task\+::display\+Task (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Print task details to standard output. 
+
+Display task information to standard output.
+
+Outputs all task fields (ID, name, date, etc.) to {\ttfamily std\+::cout}. \Hypertarget{class_task_a8b2992711ccf4e2725110f049bd56e42}\index{Task@{Task}!editTaskDate@{editTaskDate}}
+\index{editTaskDate@{editTaskDate}!Task@{Task}}
+\doxysubsubsection{\texorpdfstring{editTaskDate()}{editTaskDate()}}
+{\footnotesize\ttfamily \label{class_task_a8b2992711ccf4e2725110f049bd56e42} 
+void Task\+::edit\+Task\+Date (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{new\+Date}{}\end{DoxyParamCaption})}
+
+
+
+Edit the date of the task. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Date} & The new task date. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_task_a2ca13fac9f4669b7e1e0f1579c1aab00}\index{Task@{Task}!editTaskDesc@{editTaskDesc}}
+\index{editTaskDesc@{editTaskDesc}!Task@{Task}}
+\doxysubsubsection{\texorpdfstring{editTaskDesc()}{editTaskDesc()}}
+{\footnotesize\ttfamily \label{class_task_a2ca13fac9f4669b7e1e0f1579c1aab00} 
+void Task\+::edit\+Task\+Desc (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{new\+Desc}{}\end{DoxyParamCaption})}
+
+
+
+Edit the task\textquotesingle{}s description. 
+
+Edit the description of the task.
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Desc} & The new description.\\
+\hline
+{\em new\+Desc} & The new task description. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_task_a3c99b409c104d2c25d0c3ef8fbaf6b6d}\index{Task@{Task}!editTaskName@{editTaskName}}
+\index{editTaskName@{editTaskName}!Task@{Task}}
+\doxysubsubsection{\texorpdfstring{editTaskName()}{editTaskName()}}
+{\footnotesize\ttfamily \label{class_task_a3c99b409c104d2c25d0c3ef8fbaf6b6d} 
+void Task\+::edit\+Task\+Name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{new\+Name}{}\end{DoxyParamCaption})}
+
+
+
+Edit the name of the task. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Name} & The new task name. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_task_adc3d7a622569d69542f21886d14a8d72}\index{Task@{Task}!editTaskPriority@{editTaskPriority}}
+\index{editTaskPriority@{editTaskPriority}!Task@{Task}}
+\doxysubsubsection{\texorpdfstring{editTaskPriority()}{editTaskPriority()}}
+{\footnotesize\ttfamily \label{class_task_adc3d7a622569d69542f21886d14a8d72} 
+void Task\+::edit\+Task\+Priority (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{new\+Priority}{}\end{DoxyParamCaption})}
+
+
+
+Edit the task\textquotesingle{}s priority. 
+
+Edit the priority of the task.
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Priority} & The new priority value.\\
+\hline
+{\em new\+Priority} & The new task priority. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_task_a134146c48ed089426a318d44c012afba}\index{Task@{Task}!editTaskStatus@{editTaskStatus}}
+\index{editTaskStatus@{editTaskStatus}!Task@{Task}}
+\doxysubsubsection{\texorpdfstring{editTaskStatus()}{editTaskStatus()}}
+{\footnotesize\ttfamily \label{class_task_a134146c48ed089426a318d44c012afba} 
+void Task\+::edit\+Task\+Status (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{new\+Status}{}\end{DoxyParamCaption})}
+
+
+
+Edit the status of the task. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Status} & The new task status. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_task_a0cbe0b3ae29c78a63497c9677c09bef8}\index{Task@{Task}!getTaskDate@{getTaskDate}}
+\index{getTaskDate@{getTaskDate}!Task@{Task}}
+\doxysubsubsection{\texorpdfstring{getTaskDate()}{getTaskDate()}}
+{\footnotesize\ttfamily \label{class_task_a0cbe0b3ae29c78a63497c9677c09bef8} 
+std\+::string Task\+::get\+Task\+Date (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the task\textquotesingle{}s date. 
+
+Get the date associated with the task.
+
+\begin{DoxyReturn}{Returns}
+\doxylink{class_task}{Task} date as a string.
+
+The task date as a string. 
+\end{DoxyReturn}
+\Hypertarget{class_task_af738b04e52bc20c94c1f0136e3fbde73}\index{Task@{Task}!getTaskDesc@{getTaskDesc}}
+\index{getTaskDesc@{getTaskDesc}!Task@{Task}}
+\doxysubsubsection{\texorpdfstring{getTaskDesc()}{getTaskDesc()}}
+{\footnotesize\ttfamily \label{class_task_af738b04e52bc20c94c1f0136e3fbde73} 
+std\+::string Task\+::get\+Task\+Desc (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the task\textquotesingle{}s description. 
+
+Get the description of the task.
+
+\begin{DoxyReturn}{Returns}
+\doxylink{class_task}{Task} description as a string.
+
+The task description as a string. 
+\end{DoxyReturn}
+\Hypertarget{class_task_a5f18a9e4547bf36a10f5a8ade368c7d0}\index{Task@{Task}!getTaskID@{getTaskID}}
+\index{getTaskID@{getTaskID}!Task@{Task}}
+\doxysubsubsection{\texorpdfstring{getTaskID()}{getTaskID()}}
+{\footnotesize\ttfamily \label{class_task_a5f18a9e4547bf36a10f5a8ade368c7d0} 
+int Task\+::get\+Task\+ID (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the task\textquotesingle{}s ID. 
+
+Get the task\textquotesingle{}s unique ID.
+
+\begin{DoxyReturn}{Returns}
+\doxylink{class_task}{Task} ID as an integer.
+
+The integer task ID. 
+\end{DoxyReturn}
+\Hypertarget{class_task_ae67c9b2478f4a0778ddcdcb2dab34bf3}\index{Task@{Task}!getTaskName@{getTaskName}}
+\index{getTaskName@{getTaskName}!Task@{Task}}
+\doxysubsubsection{\texorpdfstring{getTaskName()}{getTaskName()}}
+{\footnotesize\ttfamily \label{class_task_ae67c9b2478f4a0778ddcdcb2dab34bf3} 
+std\+::string Task\+::get\+Task\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the task\textquotesingle{}s name. 
+
+Get the name of the task.
+
+\begin{DoxyReturn}{Returns}
+\doxylink{class_task}{Task} name as a string.
+
+The task name as a string. 
+\end{DoxyReturn}
+\Hypertarget{class_task_a71e2cc01380c5d0323f4274a28da7a37}\index{Task@{Task}!getTaskPriority@{getTaskPriority}}
+\index{getTaskPriority@{getTaskPriority}!Task@{Task}}
+\doxysubsubsection{\texorpdfstring{getTaskPriority()}{getTaskPriority()}}
+{\footnotesize\ttfamily \label{class_task_a71e2cc01380c5d0323f4274a28da7a37} 
+std\+::string Task\+::get\+Task\+Priority (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the task\textquotesingle{}s priority. 
+
+Get the priority level of the task.
+
+\begin{DoxyReturn}{Returns}
+\doxylink{class_task}{Task} priority as a string.
+
+The task priority as a string. 
+\end{DoxyReturn}
+\Hypertarget{class_task_af21640ae0a026cbcc7805c7932f39041}\index{Task@{Task}!getTaskStatus@{getTaskStatus}}
+\index{getTaskStatus@{getTaskStatus}!Task@{Task}}
+\doxysubsubsection{\texorpdfstring{getTaskStatus()}{getTaskStatus()}}
+{\footnotesize\ttfamily \label{class_task_af21640ae0a026cbcc7805c7932f39041} 
+std\+::string Task\+::get\+Task\+Status (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the task\textquotesingle{}s status. 
+
+Get the current status of the task.
+
+\begin{DoxyReturn}{Returns}
+\doxylink{class_task}{Task} status as a string.
+
+The task status as a string. 
+\end{DoxyReturn}
+\Hypertarget{class_task_a3121935a32b226f56babc55dec2bb81c}\index{Task@{Task}!toJSON@{toJSON}}
+\index{toJSON@{toJSON}!Task@{Task}}
+\doxysubsubsection{\texorpdfstring{toJSON()}{toJSON()}}
+{\footnotesize\ttfamily \label{class_task_a3121935a32b226f56babc55dec2bb81c} 
+crow\+::json\+::wvalue Task\+::to\+JSON (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Convert the task into JSON format. 
+
+Convert task to a JSON object.
+
+Uses crow\textquotesingle{}s JSON writer to serialize the task object.
+
+\begin{DoxyReturn}{Returns}
+A crow\+::json\+::wvalue object containing the task\textquotesingle{}s data.
+\end{DoxyReturn}
+This method packages all task fields into a JSON structure for output.
+
+\begin{DoxyReturn}{Returns}
+A crow\+::json\+::wvalue representing the task. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+backend/Task.\+h\item 
+backend/Task.\+cpp\end{DoxyCompactItemize}

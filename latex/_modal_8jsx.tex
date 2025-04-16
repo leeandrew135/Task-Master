@@ -1,0 +1,41 @@
+\doxysection{frontend/src/components/\+Home/\+Modal.jsx File Reference}
+\hypertarget{_modal_8jsx}{}\label{_modal_8jsx}\index{frontend/src/components/Home/Modal.jsx@{frontend/src/components/Home/Modal.jsx}}
+
+
+@component Modal  
+
+
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_modal_8jsx_a1527451d764f200814314ab8a929b3e6}\label{_modal_8jsx_a1527451d764f200814314ab8a929b3e6} 
+import styles Modal {\bfseries css}
+\item 
+\Hypertarget{_modal_8jsx_a59be084da8908b7d77ff34b25cd84488}\label{_modal_8jsx_a59be084da8908b7d77ff34b25cd84488} 
+{\bfseries import} \{ use\+State \} from "{}react"{}
+\item 
+\Hypertarget{_modal_8jsx_a6c7b6bd39cce41255a6adebeaba140e4}\label{_modal_8jsx_a6c7b6bd39cce41255a6adebeaba140e4} 
+const {\bfseries Modal}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+@component Modal 
+
+A modal form used to create a new task.
+
+This component allows the user to input a task title, description, priority, and deadline. It converts the priority to a numeric value and passes all data to the {\ttfamily on\+Save} callback. Clicking outside the modal or pressing "{}\+Cancel"{} closes the form via {\ttfamily on\+Close}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em \{\+Function\}} & on\+Close -\/ Function to close the modal. \\
+\hline
+{\em \{\+Function\}} & on\+Save -\/ Function called when the task is submitted. Receives title, description, priority (int), and date.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\{JSX.\+Element\} A task creation modal UI with form fields.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Robin Ali 
+\end{DoxyAuthor}

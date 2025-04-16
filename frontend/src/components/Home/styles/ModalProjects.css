@@ -1,0 +1,285 @@
+:root {
+  --gradient-purple: #8d39ec;
+  --gradient-blue: #4039ec;
+}
+
+.modal-background {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+/* MAIN MODAL CONTAINER */
+.container-home-modal {
+  width: 70vw;
+  height: 70vh;
+
+  border: none;
+  container: none;
+
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: #f1f1f1;
+}
+
+/* PROJECT HEADER CONTAINER */
+.container-project-modal {
+  width: 100%;
+  height: 15%;
+
+  position: absolute;
+  top: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: none;
+
+  font-size: 250%;
+  font-weight: 600;
+
+  /* background-color: blue; */
+}
+
+.container-project-select {
+  width: 100%;
+  height: 85%;
+  /* background-color: blue; */
+
+  position: absolute;
+  top: 15%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* NEW PROJECT SCREEN TOGGLE */
+.button-create-project {
+  width: 15%;
+  height: 10%;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  background: linear-gradient(
+    -17.5deg,
+    var(--gradient-purple),
+    var(--gradient-blue)
+  );
+  border: none;
+  border-radius: 10px;
+
+  color: white;
+  font-size: 125%;
+
+  transition: transform 0.2s ease;
+}
+.button-create-project:hover {
+  filter: brightness(0.9);
+  transform: translateY(-0.25vh);
+}
+.button-create-project:active {
+  filter: brightness(0.8);
+}
+
+/* NEW PROJECT INPUT FIELDS */
+.input-new-project {
+  width: 20%;
+  height: 10%;
+  padding-left: 5px;
+
+  margin-bottom: 15px;
+  border: 2px solid #1e1e1e;
+  border-radius: 10px;
+  font-size: 110%;
+}
+
+/* BUTTON TO PUSH NEW PROJECT TO DATABASE */
+.button-push-new-project {
+  width: 15%;
+  height: 10%;
+
+  background: linear-gradient(
+    -17.5deg,
+    var(--gradient-purple),
+    var(--gradient-blue)
+  );
+  border: none;
+  border-radius: 10px;
+
+  color: white;
+  font-size: 125%;
+
+  transition: transform 0.2s ease;
+}
+.button-push-new-project:hover {
+  filter: brightness(0.9);
+  transform: translateY(-0.5vh);
+}
+.button-push-new-project:active {
+  filter: brightness(0.8);
+}
+
+
+/* XL screens (1268px and down) */
+@media (max-width: 1268px) {
+  .container-project-modal{
+    font-size: 2rem;
+  }
+  .button-create-project{
+    font-size: 1.1rem;
+  }
+  .button-push-new-project{
+    font-size: 1.1rem;
+  }
+}
+
+/* LG screens (1024px and down) */
+@media (max-width: 1024px) {
+  .container-project-modal{
+    font-size: 2rem;
+  }
+  .button-create-project{
+    font-size: 0.9rem;
+  }
+  .button-push-new-project{
+    font-size: 0.9rem;
+  }
+}
+
+/* MD screens (868px and down) */
+@media (max-width: 868px) {
+  .container-project-modal{
+    font-size: 2rem;
+  }
+  .button-create-project{
+    font-size: 0.8rem;
+  }
+  .button-push-new-project{
+    font-size: 0.8rem;
+  }
+  .input-new-project{
+    font-size: 1rem;
+  }
+}
+
+/* SM screens (600px and down) */
+@media (max-width: 600px) {
+  .container-project-modal{
+    font-size: 1.25rem;
+  }
+  .button-create-project{
+    font-size: 0.5rem;
+  }
+  .button-push-new-project{
+    font-size: 0.5rem;
+  }
+  .input-new-project{
+    font-size: 0.7rem;
+  }
+}
+
+.button-delete-project {
+  margin-left: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.button-delete-project:hover {
+  transform: scale(1.5);
+}
+
+.project-entry {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.option-selection {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Adjust spacing between checkbox and text */
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px; 
+}
+
+.field-labels {
+  width: 20%;
+  text-align: left; 
+  margin-bottom: 10px;
+}
+
+input[type="checkbox"] {
+  /* Add if not using autoprefixer */
+  -webkit-appearance: none;
+  appearance: none;
+  /* For iOS < 15 to remove gradient background */
+  background-color: #fff;
+  /* Not removed via appearance */
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid currentColor;
+  border-radius: 0.15em;
+  transform: translateY(-0.075em);
+  display: grid;
+  place-content: center;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--form-control-color);
+  background-color: CanvasText;
+  transform-origin: bottom left;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+.form-control + .form-control {
+  margin-top: 1em;
+}
+

@@ -1,0 +1,23 @@
+var searchData=
+[
+  ['getcommentbody_0',['getCommentBody',['../class_comment.html#aa278e69cfe6408f4d96f11ece17520cb',1,'Comment']]],
+  ['getcommentdate_1',['getCommentDate',['../class_comment.html#af96db26fc7fd2a525c31fe290cd4c863',1,'Comment']]],
+  ['getcommentid_2',['getCommentID',['../class_comment.html#aa0bcfcda44a70b3937ec19ff86851c08',1,'Comment']]],
+  ['getcommentstatus_3',['getCommentStatus',['../class_comment.html#a8b832e6dc03b9e05fcb8b75ece729b5f',1,'Comment']]],
+  ['getcommentuser_4',['getCommentUser',['../class_comment.html#aef9c86702602ee67925f9060ded4e66b',1,'Comment']]],
+  ['getcurrentdate_5',['getCurrentDate',['../_project_8cpp.html#a0ed602ce2acf21623ad19a6f5b79c142',1,'Project.cpp']]],
+  ['getdate_6',['getDate',['../class_project.html#ac00ba28753f3df7bf69f05a6290712fd',1,'Project']]],
+  ['getdeadline_7',['getDeadline',['../class_project.html#a4b9bbdf3cd903fde24038259bd0bbd68',1,'Project']]],
+  ['gettaskdate_8',['getTaskDate',['../class_task.html#a0cbe0b3ae29c78a63497c9677c09bef8',1,'Task']]],
+  ['gettaskdesc_9',['getTaskDesc',['../class_task.html#af738b04e52bc20c94c1f0136e3fbde73',1,'Task']]],
+  ['gettaskid_10',['getTaskID',['../class_task.html#a5f18a9e4547bf36a10f5a8ade368c7d0',1,'Task']]],
+  ['gettaskname_11',['getTaskName',['../class_task.html#ae67c9b2478f4a0778ddcdcb2dab34bf3',1,'Task']]],
+  ['gettaskpriority_12',['getTaskPriority',['../class_task.html#a71e2cc01380c5d0323f4274a28da7a37',1,'Task']]],
+  ['gettaskstatus_13',['getTaskStatus',['../class_task.html#af21640ae0a026cbcc7805c7932f39041',1,'Task']]],
+  ['getuseremail_14',['getUserEmail',['../class_user.html#aa7860384b69a04d2fec4a6a5e08bd0db',1,'User']]],
+  ['getuserid_15',['getUserID',['../class_user.html#afd5eaa855f85fc92ea51c0d1e0565d62',1,'User']]],
+  ['getusername_16',['getUserName',['../class_user.html#a7eff012d6182f6829329620d8e21b124',1,'User']]],
+  ['getuserpassword_17',['getUserPassword',['../class_user.html#aae2f8fb15b18a0fc2e0a96d40b6590b6',1,'User']]],
+  ['getuserprojects_18',['getUserProjects',['../class_user.html#a95d694c81d46db64b3649d53c93575f6',1,'User']]],
+  ['getusers_19',['getUsers',['../class_project.html#a589e67eb3fa53f03e1a5d47fa9dfefbb',1,'Project']]]
+];

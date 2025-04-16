@@ -1,0 +1,41 @@
+\doxysection{Todo\+List.\+h}
+\hypertarget{_todo_list_8h_source}{}\label{_todo_list_8h_source}\index{backend/TodoList.h@{backend/TodoList.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ TODOLIST\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ TODOLIST\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Task.h"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_todo_list_a8fae3299f273c6a0bd1cb7fa57595898}{TodoList}}\ \{}
+\DoxyCodeLine{00021\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00022\ \ \ \ \ std::vector<Task>\ \mbox{\hyperlink{class_todo_list_ae214c9c8a27a17098924d8df3f9c093c}{backlog}};\ \ }
+\DoxyCodeLine{00023\ \ \ \ \ std::vector<Task>\ \mbox{\hyperlink{class_todo_list_a199ddb679cdfe691fe480c9c56be828e}{doing}};\ \ \ \ }
+\DoxyCodeLine{00024\ \ \ \ \ std::vector<Task>\ \mbox{\hyperlink{class_todo_list_ac95ab601f13be7cc7f84d7f0054492ea}{review}};\ \ \ }
+\DoxyCodeLine{00025\ \ \ \ \ std::vector<Task>\ \mbox{\hyperlink{class_todo_list_a2a1949c805923bcf68a0c23cbf3b98db}{done}};\ \ \ \ \ }
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{class_task}{Task}}*\ \mbox{\hyperlink{class_todo_list_ab567e2a96451c23d7761805e633d38fa}{findTask}}(\textcolor{keywordtype}{int}\ taskID);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{class_todo_list_a8fae3299f273c6a0bd1cb7fa57595898}{TodoList}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{class_todo_list_a14a75a4d6a389ab061046407f8a6b3f2}{\string~TodoList}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_todo_list_aaaba17c3e30509dff2d24e13cad932b1}{createTask}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_task}{Task}}\&\ task);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_todo_list_ad8f79272d3084eb885bb2a5de23928e7}{readTask}}(\textcolor{keywordtype}{int}\ taskID)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_todo_list_acea11baf42547963ccd4ec76307b96bd}{updateStatus}}(\textcolor{keywordtype}{int}\ taskID,\ \textcolor{keyword}{const}\ std::string\&\ newStatus);}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_todo_list_abb3d02a09b6fca9151e6cf5fba259339}{deleteTask}}(\textcolor{keywordtype}{int}\ taskID);}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00085\ \ \ \ \ std::vector<Task>\ \mbox{\hyperlink{class_todo_list_a53ba58f1fe146cb5f19137375c4d28da}{filterTask}}(\textcolor{keyword}{const}\ std::string\&\ category)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00093\ \ \ \ \ std::vector<Task>\ \mbox{\hyperlink{class_todo_list_a8c20163a4aef54d6a87140ca1454a985}{filterByPriority}}(\textcolor{keyword}{const}\ std::string\&\ priority)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00094\ \};}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ TODOLIST\_H}}
+
+\end{DoxyCode}

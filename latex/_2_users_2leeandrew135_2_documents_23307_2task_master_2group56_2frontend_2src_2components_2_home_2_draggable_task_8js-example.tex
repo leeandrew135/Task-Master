@@ -1,0 +1,101 @@
+\doxysection{/\+Users/leeandrew135/\+Documents/3307/task\+\_\+master/group56/frontend/src/components/\+Home/\+Draggable\+Task.\+js}
+\hypertarget{_2_users_2leeandrew135_2_documents_23307_2task_master_2group56_2frontend_2src_2components_2_home_2_draggable_task_8js-example}{}\label{_2_users_2leeandrew135_2_documents_23307_2task_master_2group56_2frontend_2src_2components_2_home_2_draggable_task_8js-example}\texorpdfstring{$<$}{<}Draggable\+Task task=\{\{ id\+: 1, title\+: "{}\+Fix login bug"{} \}\} /\texorpdfstring{$>$}{>}
+
+\texorpdfstring{$<$}{<}Draggable\+Task task=\{\{ id\+: 1, title\+: "{}\+Fix login bug"{} \}\} /\texorpdfstring{$>$}{>}\begin{DoxyAuthor}{Author}
+Robin
+\end{DoxyAuthor}
+
+\begin{DoxyCodeInclude}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ components/Home/DraggableTask.js}}
+\DoxyCodeLine{\textcolor{keyword}{import}\ \{\ useDraggable\ \}\ from\ \textcolor{stringliteral}{"{}@dnd-\/kit/core"{}};}
+\DoxyCodeLine{\textcolor{keyword}{import}\ \{\ useState,\ useRef,\ useEffect\ \}\ from\ \textcolor{stringliteral}{"{}react"{}};}
+\DoxyCodeLine{\textcolor{keyword}{const}\ DraggableTask\ =\ (\{\ task\ \})\ =>\ \{}
+\DoxyCodeLine{\ \ \textcolor{keyword}{const}\ \{\ attributes,\ listeners,\ setNodeRef,\ transform,\ isDragging\ \}\ =}
+\DoxyCodeLine{\ \ \ \ useDraggable(\{}
+\DoxyCodeLine{\ \ \ \ \ \ id:\ task.id.toString(),}
+\DoxyCodeLine{\ \ \ \ \});}
+\DoxyCodeLine{\ \ \textcolor{keyword}{const}\ [showTooltip,\ setShowTooltip]\ =\ useState(\textcolor{keyword}{false});}
+\DoxyCodeLine{\ \ \textcolor{keyword}{const}\ cardRef\ =\ useRef(\textcolor{keyword}{null});}
+\DoxyCodeLine{\ \ \textcolor{keyword}{const}\ [tooltipPosition,\ setTooltipPosition]\ =\ useState(\{\ top:\ 0,\ left:\ 0\ \});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{keyword}{const}\ style\ =\ \{}
+\DoxyCodeLine{\ \ \ \ transform:\ transform}
+\DoxyCodeLine{\ \ \ \ \ \ ?\ \`{}translate(\$\{transform.x\}px,\ \$\{transform.y\}px)\`{}}
+\DoxyCodeLine{\ \ \ \ \ \ :\ undefined,}
+\DoxyCodeLine{\ \ \ \ opacity:\ isDragging\ ?\ 0.5\ :\ 1,}
+\DoxyCodeLine{\ \ \};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ useEffect(()\ =>\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (showTooltip\ \&\&\ cardRef.current)\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \textcolor{keyword}{const}\ rect\ =\ cardRef.current.getBoundingClientRect();}
+\DoxyCodeLine{\ \ \ \ \ \ setTooltipPosition(\{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ top:\ rect.bottom\ +\ window.scrollY,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ left:\ rect.left\ +\ window.scrollX,}
+\DoxyCodeLine{\ \ \ \ \ \ \});}
+\DoxyCodeLine{\ \ \ \ \}}
+\DoxyCodeLine{\ \ \},\ [showTooltip]);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{keyword}{const}\ handleMouseEnter\ =\ ()\ =>\ \{}
+\DoxyCodeLine{\ \ \ \ setShowTooltip(\textcolor{keyword}{true});}
+\DoxyCodeLine{\ \ \};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{keyword}{const}\ handleMouseLeave\ =\ ()\ =>\ \{}
+\DoxyCodeLine{\ \ \ \ setShowTooltip(\textcolor{keyword}{false});}
+\DoxyCodeLine{\ \ \};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{return}\ (}
+\DoxyCodeLine{\ \ \ \ <>}
+\DoxyCodeLine{\ \ \ \ \ \ <div}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ ref=\{(node)\ =>\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ setNodeRef(node);}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ cardRef.current\ =\ node;}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \}\}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ style=\{style\}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{...listeners\}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{...attributes\}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ className=\textcolor{stringliteral}{"{}kanban-\/card"{}}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ onMouseEnter=\{handleMouseEnter\}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ onMouseLeave=\{handleMouseLeave\}}
+\DoxyCodeLine{\ \ \ \ \ \ >}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ <h3>\{task.title\}</h3>}
+\DoxyCodeLine{\ \ \ \ \ \ </div>}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \{showTooltip\ \&\&\ !isDragging\ \&\&\ (}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ <div}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ className=\textcolor{stringliteral}{"{}task-\/tooltip"{}}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ style=\{\{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ position:\ \textcolor{stringliteral}{"{}absolute"{}},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ top:\ \`{}\$\{tooltipPosition.top\}px\`{},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ left:\ \`{}\$\{tooltipPosition.left\}px\`{},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ backgroundColor:\ \textcolor{stringliteral}{"{}white"{}},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ border:\ \textcolor{stringliteral}{"{}1px\ solid\ \#ccc"{}},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ borderRadius:\ \textcolor{stringliteral}{"{}4px"{}},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ padding:\ \textcolor{stringliteral}{"{}10px"{}},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ boxShadow:\ \textcolor{stringliteral}{"{}0\ 2px\ 5px\ rgba(0,0,0,0.2)"{}},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ zIndex:\ 1000,}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ minWidth:\ \textcolor{stringliteral}{"{}200px"{}},}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \}\}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ >}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ <h4>\{task.title\}</h4>}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ <p>}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ <strong>Description:</strong>\ \{task.description\ ||\ \textcolor{stringliteral}{"{}No\ description"{}}\}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ </p>}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ <p>}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ <strong>Priority:</strong>\ \{task.priority\}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ </p>}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ <p>}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ <strong>Due\ Date:</strong>\{\textcolor{stringliteral}{"{}\ "{}}\}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \{task.due\_date}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ ?\ \textcolor{keyword}{new}\ Date(task.due\_date).toLocaleDateString()}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \textcolor{stringliteral}{"{}No\ due\ date"{}}\}}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ </p>}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ </div>}
+\DoxyCodeLine{\ \ \ \ \ \ )\}}
+\DoxyCodeLine{\ \ \ \ </>}
+\DoxyCodeLine{\ \ );}
+\DoxyCodeLine{\};}
+\DoxyCodeLine{}
+\DoxyCodeLine{export\ \textcolor{keywordflow}{default}\ DraggableTask;}
+
+\end{DoxyCodeInclude}
+ 

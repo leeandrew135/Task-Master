@@ -1,0 +1,53 @@
+\doxysection{Project.\+h}
+\hypertarget{_project_8h_source}{}\label{_project_8h_source}\index{backend/Project.h@{backend/Project.h}}
+\mbox{\hyperlink{_project_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#ifndef\ PROJECT\_H}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ PROJECT\_H}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}TodoList.h"{}}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_user}{User}};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_project_a338bf35a366dd8b2ccef33864fd58b8b}{Project}}}
+\DoxyCodeLine{00031\ \{}
+\DoxyCodeLine{00032\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{class_todo_list}{TodoList}}\ \mbox{\hyperlink{class_project_a1930daff4f01facc35adf413dcb3b397}{list}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00034\ \ \ \ \ std::vector<User*>\ \mbox{\hyperlink{class_project_a7182abd3d088794bb4366dc1b01a0cba}{userList}};\ \ \ \ }
+\DoxyCodeLine{00035\ \ \ \ \ std::string\ \mbox{\hyperlink{class_project_a4eb016a6b9801d234292166833b601e3}{date}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00036\ \ \ \ \ std::string\ \mbox{\hyperlink{class_project_adfd21159384002aec430813909879bd3}{deadline}};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_project_a6b6db72d6d7031641c719b0b1751f15b}{completionStatus}};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00050\ \ \ \ \ \mbox{\hyperlink{class_project_a338bf35a366dd8b2ccef33864fd58b8b}{Project}}(\mbox{\hyperlink{class_todo_list}{TodoList}}\ \mbox{\hyperlink{class_project_a1930daff4f01facc35adf413dcb3b397}{list}},\ std::string\ \mbox{\hyperlink{class_project_adfd21159384002aec430813909879bd3}{deadline}},\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_project_a6b6db72d6d7031641c719b0b1751f15b}{completionStatus}}\ =\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_project_a0bff4014c4c7dc8156fb813f183702ad}{addTask}}(std::string\ name);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_project_a1b900b9599f6d1f768820768490525f8}{addUser}}(\mbox{\hyperlink{class_user}{User}}*\ user);}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_project_aaa4058fc80d135d2f91ba41864ee19ec}{changeDeadline}}(std::string\ \mbox{\hyperlink{class_project_a4eb016a6b9801d234292166833b601e3}{date}});}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_project_a7a748941c5eaaa8a38af158702dfc865}{markComplete}}(\textcolor{keywordtype}{bool}\ status);}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00085\ \ \ \ \ std::string\ \mbox{\hyperlink{class_project_ac00ba28753f3df7bf69f05a6290712fd}{getDate}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00092\ \ \ \ \ std::string\ \mbox{\hyperlink{class_project_a4b9bbdf3cd903fde24038259bd0bbd68}{getDeadline}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_project_a69da087e9305854d57173c9d48869a80}{isComplete}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00106\ \ \ \ \ std::vector<User*>\ \mbox{\hyperlink{class_project_a589e67eb3fa53f03e1a5d47fa9dfefbb}{getUsers}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_project_a61f8a18fd2fcc9a3eafd3d31f273410b}{operator==}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_project_a338bf35a366dd8b2ccef33864fd58b8b}{Project}}\&\ other)\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00117\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (this-\/>deadline\ ==\ other.\mbox{\hyperlink{class_project_adfd21159384002aec430813909879bd3}{deadline}}\ \&\&\ this-\/>date\ ==\ other.\mbox{\hyperlink{class_project_a4eb016a6b9801d234292166833b601e3}{date}});}
+\DoxyCodeLine{00119\ \ \ \ \ \}}
+\DoxyCodeLine{00120\ \};}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ PROJECT\_H}}
+
+\end{DoxyCode}

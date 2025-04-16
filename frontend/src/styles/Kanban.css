@@ -1,0 +1,100 @@
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f3f4f6;
+    color: #1f2937;
+  }
+  
+.Kanban {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+  
+.kanban-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    color: #f1f1f1;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+}
+  
+.kanban-header h1 {
+    font-size: 1.8rem;
+    margin: 0;
+}
+  
+.kanban-header .kanban-actions button {
+    background: white;
+    color: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    margin-left: 0.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+  
+.kanban-header .kanban-actions button:hover {
+    background: #f0e9ff;
+}
+  
+  /* Columns Layout */
+.kanban-columns {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+  
+/* Single Column */
+.kanban-column {
+    background: white;
+    border-radius: 12px;
+    padding: 1rem;
+    flex: 1;
+    min-width: 250px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+}
+  
+.kanban-column h2 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    color: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    margin-bottom: 1rem;
+}
+  
+/* Task Card */
+.kanban-card {
+    background: #ffffff;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.04);
+    transition: transform 0.15s ease;
+}
+  
+.kanban-card:hover {
+    transform: scale(1.02);
+}
+  
+.kanban-card h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1rem;
+}
+  
+.kanban-card p {
+    margin: 0;
+    font-size: 0.875rem;
+    color: #4b5563;
+}
+  

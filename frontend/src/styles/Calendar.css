@@ -1,0 +1,118 @@
+.calendar {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+    font-family: sans-serif;
+  }
+  
+  .calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    color: #f1f1f1;
+  }
+  
+  .calendar-header button {
+    background: linear-gradient(-45deg, var(--gradient-purple), var(--gradient-blue));
+    border: none;
+    border-radius: 50%;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 2rem;
+    margin: 5vw 0 5vw 0;
+    margin-left: 3vw;
+    margin-right: 3vw;
+
+  }
+  .calendar-header button:hover {
+    background: linear-gradient(135deg, #a144e6, #4a00e0);
+   
+  }
+  
+  
+  .calendar-header h2 {
+    margin: 0;
+    font-size: 2.5rem;
+  }
+  
+  .day-labels {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+}
+
+.date-number {
+  font-weight: bold;
+  margin-bottom: 2px;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.task-container {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding-right: 2px;
+}
+
+
+.task-name {
+  font-size: 11px;
+  margin-bottom: 2px;
+  background-color: #e0f3ff;
+  padding: 2px 4px;
+  border-radius: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.day-cell {
+  border: 1px solid #ccc;
+  height: 100px;
+  padding: 4px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+  
+  .empty {
+    background-color: #f4f4f4;
+    color: #ccc;
+  }
+  
+  .calendar-back-button-container {
+    width: 100%;
+    display: flex;
+    background-color: #f9f9f9;
+    justify-content: flex-start;
+    padding: 1rem;
+  }
+  
+  .calendar-back-button {
+    background: linear-gradient(-45deg, var(--gradient-purple), var(--gradient-blue));
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .calendar-back-button:hover {
+    transform: translateY(-2px);
+  }
+  

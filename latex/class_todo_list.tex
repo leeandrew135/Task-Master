@@ -1,0 +1,267 @@
+\doxysection{Todo\+List Class Reference}
+\hypertarget{class_todo_list}{}\label{class_todo_list}\index{TodoList@{TodoList}}
+
+
+Manages a categorized collection of tasks using a Kanban-\/style system.  
+
+
+
+
+{\ttfamily \#include $<$Todo\+List.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_todo_list_a8fae3299f273c6a0bd1cb7fa57595898}\label{class_todo_list_a8fae3299f273c6a0bd1cb7fa57595898} 
+{\bfseries Todo\+List} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\Hypertarget{class_todo_list_a14a75a4d6a389ab061046407f8a6b3f2}\label{class_todo_list_a14a75a4d6a389ab061046407f8a6b3f2} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Todo\+List} ()=default
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_todo_list_aaaba17c3e30509dff2d24e13cad932b1}{create\+Task}} (const \mbox{\hyperlink{class_task}{Task}} \&task)
+\begin{DoxyCompactList}\small\item\em Add a new task to the backlog. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_todo_list_ad8f79272d3084eb885bb2a5de23928e7}{read\+Task}} (int task\+ID) const
+\begin{DoxyCompactList}\small\item\em Display the task with the given ID. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_todo_list_acea11baf42547963ccd4ec76307b96bd}{update\+Status}} (int task\+ID, const std\+::string \&new\+Status)
+\begin{DoxyCompactList}\small\item\em Update the status/category of a task. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_todo_list_abb3d02a09b6fca9151e6cf5fba259339}{delete\+Task}} (int task\+ID)
+\begin{DoxyCompactList}\small\item\em Delete a task by ID from any category. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_task}{Task}} $>$ \mbox{\hyperlink{class_todo_list_a53ba58f1fe146cb5f19137375c4d28da}{filter\+Task}} (const std\+::string \&category) const
+\begin{DoxyCompactList}\small\item\em Filter tasks by category. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_task}{Task}} $>$ \mbox{\hyperlink{class_todo_list_a8c20163a4aef54d6a87140ca1454a985}{filter\+By\+Priority}} (const std\+::string \&priority) const
+\begin{DoxyCompactList}\small\item\em Filter tasks by priority. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_task}{Task}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_todo_list_ab567e2a96451c23d7761805e633d38fa}{find\+Task}} (int task\+ID)
+\begin{DoxyCompactList}\small\item\em Find a task by ID across all categories. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_todo_list_ae214c9c8a27a17098924d8df3f9c093c}\label{class_todo_list_ae214c9c8a27a17098924d8df3f9c093c} 
+std\+::vector$<$ \mbox{\hyperlink{class_task}{Task}} $>$ {\bfseries backlog}
+\begin{DoxyCompactList}\small\item\em Tasks that are not yet started. \end{DoxyCompactList}\item 
+\Hypertarget{class_todo_list_a199ddb679cdfe691fe480c9c56be828e}\label{class_todo_list_a199ddb679cdfe691fe480c9c56be828e} 
+std\+::vector$<$ \mbox{\hyperlink{class_task}{Task}} $>$ {\bfseries doing}
+\begin{DoxyCompactList}\small\item\em Tasks currently in progress. \end{DoxyCompactList}\item 
+\Hypertarget{class_todo_list_ac95ab601f13be7cc7f84d7f0054492ea}\label{class_todo_list_ac95ab601f13be7cc7f84d7f0054492ea} 
+std\+::vector$<$ \mbox{\hyperlink{class_task}{Task}} $>$ {\bfseries review}
+\begin{DoxyCompactList}\small\item\em Tasks awaiting review. \end{DoxyCompactList}\item 
+\Hypertarget{class_todo_list_a2a1949c805923bcf68a0c23cbf3b98db}\label{class_todo_list_a2a1949c805923bcf68a0c23cbf3b98db} 
+std\+::vector$<$ \mbox{\hyperlink{class_task}{Task}} $>$ {\bfseries done}
+\begin{DoxyCompactList}\small\item\em Completed tasks. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages a categorized collection of tasks using a Kanban-\/style system. 
+
+The \doxylink{class_todo_list}{Todo\+List} class organizes tasks into four categories\+: backlog, doing, review, and done. It supports creating, reading, updating, deleting, and filtering tasks based on category or priority. Internally, each category is stored as a separate vector of \doxylink{class_task}{Task} objects.
+
+This class uses helper methods for task lookup and supports status transitions.
+
+\begin{DoxyAuthor}{Author}
+Robin 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_todo_list_aaaba17c3e30509dff2d24e13cad932b1}\index{TodoList@{TodoList}!createTask@{createTask}}
+\index{createTask@{createTask}!TodoList@{TodoList}}
+\doxysubsubsection{\texorpdfstring{createTask()}{createTask()}}
+{\footnotesize\ttfamily \label{class_todo_list_aaaba17c3e30509dff2d24e13cad932b1} 
+void Todo\+List\+::create\+Task (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_task}{Task}} \&}]{task}{}\end{DoxyParamCaption})}
+
+
+
+Add a new task to the backlog. 
+
+Create a task and add it to the backlog category.
+
+
+\begin{DoxyParams}{Parameters}
+{\em task} & The task to add.\\
+\hline
+{\em task} & The task to be added. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_todo_list_abb3d02a09b6fca9151e6cf5fba259339}\index{TodoList@{TodoList}!deleteTask@{deleteTask}}
+\index{deleteTask@{deleteTask}!TodoList@{TodoList}}
+\doxysubsubsection{\texorpdfstring{deleteTask()}{deleteTask()}}
+{\footnotesize\ttfamily \label{class_todo_list_abb3d02a09b6fca9151e6cf5fba259339} 
+bool Todo\+List\+::delete\+Task (\begin{DoxyParamCaption}\item[{int}]{task\+ID}{}\end{DoxyParamCaption})}
+
+
+
+Delete a task by ID from any category. 
+
+Delete a task by its ID from all categories.
+
+
+\begin{DoxyParams}{Parameters}
+{\em task\+ID} & The ID of the task to delete. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the task was deleted successfully, false if not found.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em task\+ID} & The ID of the task to delete. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the task was found and deleted, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_todo_list_a8c20163a4aef54d6a87140ca1454a985}\index{TodoList@{TodoList}!filterByPriority@{filterByPriority}}
+\index{filterByPriority@{filterByPriority}!TodoList@{TodoList}}
+\doxysubsubsection{\texorpdfstring{filterByPriority()}{filterByPriority()}}
+{\footnotesize\ttfamily \label{class_todo_list_a8c20163a4aef54d6a87140ca1454a985} 
+std\+::vector$<$ \mbox{\hyperlink{class_task}{Task}} $>$ Todo\+List\+::filter\+By\+Priority (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{priority}{}\end{DoxyParamCaption}) const}
+
+
+
+Filter tasks by priority. 
+
+Get all tasks that match a given priority.
+
+
+\begin{DoxyParams}{Parameters}
+{\em priority} & The priority level to filter by. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of tasks that match the given priority.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em priority} & The priority to filter by (e.\+g., "{}\+High"{}, "{}\+Medium"{}, "{}\+Low"{}). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of tasks with the specified priority. 
+\end{DoxyReturn}
+\Hypertarget{class_todo_list_a53ba58f1fe146cb5f19137375c4d28da}\index{TodoList@{TodoList}!filterTask@{filterTask}}
+\index{filterTask@{filterTask}!TodoList@{TodoList}}
+\doxysubsubsection{\texorpdfstring{filterTask()}{filterTask()}}
+{\footnotesize\ttfamily \label{class_todo_list_a53ba58f1fe146cb5f19137375c4d28da} 
+std\+::vector$<$ \mbox{\hyperlink{class_task}{Task}} $>$ Todo\+List\+::filter\+Task (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{category}{}\end{DoxyParamCaption}) const}
+
+
+
+Filter tasks by category. 
+
+Get all tasks from a specific category.
+
+
+\begin{DoxyParams}{Parameters}
+{\em category} & One of "{}backlog"{}, "{}doing"{}, "{}review"{}, or "{}done"{}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of tasks that belong to the specified category.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em category} & The category name ("{}\+Backlog"{}, "{}\+Doing"{}, "{}\+Review"{}, "{}\+Done"{}). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of tasks in the specified category. 
+\end{DoxyReturn}
+\Hypertarget{class_todo_list_ab567e2a96451c23d7761805e633d38fa}\index{TodoList@{TodoList}!findTask@{findTask}}
+\index{findTask@{findTask}!TodoList@{TodoList}}
+\doxysubsubsection{\texorpdfstring{findTask()}{findTask()}}
+{\footnotesize\ttfamily \label{class_todo_list_ab567e2a96451c23d7761805e633d38fa} 
+\mbox{\hyperlink{class_task}{Task}} \texorpdfstring{$\ast$}{*} Todo\+List\+::find\+Task (\begin{DoxyParamCaption}\item[{int}]{task\+ID}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Find a task by ID across all categories. 
+
+Find a task by its ID across all task categories.
+
+
+\begin{DoxyParams}{Parameters}
+{\em task\+ID} & The unique identifier of the task to find. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the \doxylink{class_task}{Task} if found, nullptr otherwise.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em task\+ID} & The ID of the task to find. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the \doxylink{class_task}{Task} if found, otherwise nullptr.
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Robin 
+\end{DoxyAuthor}
+\Hypertarget{class_todo_list_ad8f79272d3084eb885bb2a5de23928e7}\index{TodoList@{TodoList}!readTask@{readTask}}
+\index{readTask@{readTask}!TodoList@{TodoList}}
+\doxysubsubsection{\texorpdfstring{readTask()}{readTask()}}
+{\footnotesize\ttfamily \label{class_todo_list_ad8f79272d3084eb885bb2a5de23928e7} 
+void Todo\+List\+::read\+Task (\begin{DoxyParamCaption}\item[{int}]{task\+ID}{}\end{DoxyParamCaption}) const}
+
+
+
+Display the task with the given ID. 
+
+Display a task\textquotesingle{}s details by its ID.
+
+
+\begin{DoxyParams}{Parameters}
+{\em task\+ID} & The ID of the task to read.\\
+\hline
+\end{DoxyParams}
+Searches through all categories to find and display the task.
+
+
+\begin{DoxyParams}{Parameters}
+{\em task\+ID} & The ID of the task to display. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_todo_list_acea11baf42547963ccd4ec76307b96bd}\index{TodoList@{TodoList}!updateStatus@{updateStatus}}
+\index{updateStatus@{updateStatus}!TodoList@{TodoList}}
+\doxysubsubsection{\texorpdfstring{updateStatus()}{updateStatus()}}
+{\footnotesize\ttfamily \label{class_todo_list_acea11baf42547963ccd4ec76307b96bd} 
+bool Todo\+List\+::update\+Status (\begin{DoxyParamCaption}\item[{int}]{task\+ID}{, }\item[{const std\+::string \&}]{new\+Status}{}\end{DoxyParamCaption})}
+
+
+
+Update the status/category of a task. 
+
+Change the status/category of a task.
+
+Moves the task to a different internal category vector.
+
+
+\begin{DoxyParams}{Parameters}
+{\em task\+ID} & The ID of the task to update. \\
+\hline
+{\em new\+Status} & The new status/category to move the task to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the task was updated successfully, false if not found.
+\end{DoxyReturn}
+Moves the task to the specified category and updates its status.
+
+
+\begin{DoxyParams}{Parameters}
+{\em task\+ID} & The ID of the task to update. \\
+\hline
+{\em new\+Status} & The new status (category) of the task. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the task was updated successfully, false otherwise. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+backend/Todo\+List.\+h\item 
+backend/\mbox{\hyperlink{_todo_list_8cpp}{Todo\+List.\+cpp}}\end{DoxyCompactItemize}
