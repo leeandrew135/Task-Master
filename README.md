@@ -91,7 +91,7 @@ endif()
 
 ---
 
-# To run the server and frontend:
+### To run the server and frontend:
 
 1. In root folder, make a folder called "build"
 2. In root folder, run the following commands: cd build -> cmake .. -> make
